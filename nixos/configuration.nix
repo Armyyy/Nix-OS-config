@@ -211,5 +211,8 @@
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.11"; # Did you read the comment?
 
-
+  # How do I control my laptop's fan speeds?
+  environment.systemPackages = with pkgs; [
+    lenovo-legion
+  ];
 }
