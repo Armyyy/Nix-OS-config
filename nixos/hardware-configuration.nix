@@ -23,11 +23,8 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  # How do I control my laptop's fan speeds?
-  boot.kernelModules = [ "lenovo-legion-module" ];
-  # boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = with config.boot.kernelPackages; [ lenovo-legion-module ];
-  # boot.extraModulePackages = [ ];
+  boot.kernelModules = [ "kvm-amd" ];
+  boot.extraModulePackages = [ ];
 
   boot.loader = {
     grub = {
