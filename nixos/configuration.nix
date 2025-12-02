@@ -184,6 +184,7 @@
       extraGroups = [
         "networkmanager"
         "wheel"
+        "wireshark"
       ];
       shell = pkgs.fish;
     };
