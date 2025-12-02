@@ -163,7 +163,10 @@
   };
 
   programs.fish.enable = true;
-  programs.wireshark.enable = true;
+  programs.wireshark = {
+    enable = true;
+    package = pkgs.wireshark;
+  };
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
