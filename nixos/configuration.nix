@@ -163,6 +163,7 @@
   };
 
   programs.fish.enable = true;
+  programs.wireshark.enable = true;
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -210,4 +211,5 @@
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.11"; # Did you read the comment?
+
 }
