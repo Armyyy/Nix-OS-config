@@ -58,6 +58,8 @@
     brave
     discord
     devenv
+
+    nerd-fonts.jetbrains-mono
   ];
 
   # Enable home-manager and git
@@ -99,6 +101,20 @@
       enableFishIntegration = true;
     };
     nix-index-database.comma.enable = true;
+  };
+
+  programs.eza = {
+    enable = true;
+    enableFishIntegration = true;
+    colors = "always";
+    git = true;
+    icons = "always";
+
+    extraOptions = [
+      "-lah"
+      "--group-directories-first"
+      "--colour-scale"
+    ];
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
