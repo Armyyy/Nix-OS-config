@@ -58,6 +58,8 @@
     brave
     discord
     devenv
+    libreoffice-fresh
+    aerc
 
     nerd-fonts.jetbrains-mono
   ];
@@ -117,16 +119,49 @@
     ];
   };
 
+  xdg.configFile."eza/theme.yml".source =
+    let
+      repo = pkgs.fetchFromGitHub {
+        owner = "eza-community";
+        repo = "eza-themes";
+        rev = "17095bff4792eecd7f4f1ed8301b15000331c906";
+        hash = "sha256-2WTbCQlhwMo5cOn3KwtNiIst0tNfASfZnPNsNBs+gcU=";
+      };
+    in
+    "${repo}/themes/tokyonight.yml";
+
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts.monospace = [ "JetBrainsMono Nerd Font" ];
 
   programs.yazi = {
     enable = true;
     enableFishIntegration = true;
+    initLua = ./init.lua;
+    plugins = {
+      full-border = pkgs.yaziPlugins.full-border;
+    };
     settings = {
       mgr = {
         show_hidden = true;
       };
+      preview = {
+        max_width = 65535;
+        max_height = 65535;
+      };
+    };
+  };
+
+  programs.ghostty = {
+    enable = true;
+    enableFishIntegration = true;
+    settings = {
+      background = "000000";
+      background-image = "/home/army/Pictures/Castorice/the_pink_team.1.jpg";
+      background-image-opacity = 0.025;
+      background-image-fit = "cover";
+
+      selection-foreground = "cell-background";
+      selection-background = "cell-foreground";
     };
   };
 
