@@ -58,11 +58,12 @@
     brave
     discord
     devenv
-    htop
+    nerd-fonts.jetbrains-mono
     libreoffice-fresh
     aerc
+    htop
     mission-center
-    nerd-fonts.jetbrains-mono
+    poppler-utils
   ];
 
   # Enable home-manager and git
