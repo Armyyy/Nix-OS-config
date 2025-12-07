@@ -58,9 +58,10 @@
     brave
     discord
     devenv
+    htop
     libreoffice-fresh
     aerc
-
+    mission-center
     nerd-fonts.jetbrains-mono
   ];
 
@@ -74,7 +75,6 @@
   programs.nh = {
     enable = true;
     clean.enable = true;
-
     flake = /home/army/Documents/nix-config;
   };
 
@@ -164,6 +164,9 @@
       selection-background = "cell-foreground";
     };
   };
+
+  programs.fastfetch.enable = true;
+  programs.fish.shellAliases.fastfetch = "fastfetch --config examples/25 --logo /home/army/Pictures/Castorice/castorice-ansi";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "25.05";
