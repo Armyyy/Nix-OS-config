@@ -3,11 +3,14 @@
     ./brave
     ./devenv
     ./direnv
+    ./discord
     ./eza
     ./fastfetch
     ./fish
     ./ghostty
     ./git
+    ./libreoffice
+    ./mission-center
     ./nh
     ./nix-index
     ./nix-index-database-comma
@@ -15,5 +18,4 @@
     ./yazi
     ./zed-editor
   ];
-
 }
