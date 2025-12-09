@@ -77,8 +77,6 @@
     flake = /home/army/Documents/nix-config;
   };
 
-  programs.fish.enable = true;
-
   programs.nix-your-shell = {
     enable = true;
     enableFishIntegration = true;
@@ -97,51 +95,8 @@
     nix-index-database.comma.enable = true;
   };
 
-  programs.eza = {
-    enable = true;
-    enableFishIntegration = true;
-    colors = "always";
-    git = true;
-    icons = "always";
-
-    extraOptions = [
-      "-lah"
-      "--group-directories-first"
-      "--colour-scale"
-    ];
-  };
-
-  xdg.configFile."eza/theme.yml".source =
-    let
-      repo = pkgs.fetchFromGitHub {
-        owner = "eza-community";
-        repo = "eza-themes";
-        rev = "17095bff4792eecd7f4f1ed8301b15000331c906";
-        hash = "sha256-2WTbCQlhwMo5cOn3KwtNiIst0tNfASfZnPNsNBs+gcU=";
-      };
-    in
-    "${repo}/themes/tokyonight.yml";
-
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts.monospace = [ "JetBrainsMono Nerd Font" ];
-
-  programs.yazi = {
-    enable = true;
-    enableFishIntegration = true;
-    initLua = ./init.lua;
-    plugins = {
-      full-border = pkgs.yaziPlugins.full-border;
-    };
-    settings = {
-      mgr = {
-        show_hidden = true;
-      };
-      preview = {
-        max_width = 65535;
-        max_height = 65535;
-      };
-    };
-  };
 
   programs.ghostty = {
     enable = true;
