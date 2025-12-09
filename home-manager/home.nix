@@ -56,12 +56,6 @@
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   # home.packages = with pkgs; [ steam ];
-  home.packages = with pkgs; [
-    discord
-    nerd-fonts.jetbrains-mono
-    libreoffice-fresh
-    mission-center
-  ];
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
