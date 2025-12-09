@@ -58,7 +58,6 @@
   home.packages = with pkgs; [
     brave
     discord
-    devenv
     nerd-fonts.jetbrains-mono
     libreoffice-fresh
     mission-center
@@ -77,16 +76,6 @@
     flake = /home/army/Documents/nix-config;
   };
 
-  programs.nix-your-shell = {
-    enable = true;
-    enableFishIntegration = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
-
   programs = {
     nix-index = {
       enable = true;
@@ -97,20 +86,6 @@
 
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts.monospace = [ "JetBrainsMono Nerd Font" ];
-
-  programs.ghostty = {
-    enable = true;
-    enableFishIntegration = true;
-    settings = {
-      background = "000000";
-      background-image = "/home/army/Pictures/Castorice/the_pink_team.1.jpg";
-      background-image-opacity = 0.025;
-      background-image-fit = "cover";
-
-      selection-foreground = "cell-background";
-      selection-background = "cell-foreground";
-    };
-  };
 
   programs.fastfetch.enable = true;
   programs.fish.shellAliases.fastfetch = "fastfetch --config examples/25 --logo /home/army/Pictures/Castorice/castorice-ansi";
