@@ -20,6 +20,7 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
     ./programs
+    ./fonts
   ];
 
   nixpkgs = {
@@ -56,39 +57,14 @@
   # programs.neovim.enable = true;
   # home.packages = with pkgs; [ steam ];
   home.packages = with pkgs; [
-    brave
     discord
     nerd-fonts.jetbrains-mono
     libreoffice-fresh
     mission-center
   ];
 
-  # Enable home-manager and git
-  programs.home-manager.enable = true;
-  programs.git.enable = true;
-
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
-
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    flake = /home/army/Documents/nix-config;
-  };
-
-  programs = {
-    nix-index = {
-      enable = true;
-      enableFishIntegration = true;
-    };
-    nix-index-database.comma.enable = true;
-  };
-
-  fonts.fontconfig.enable = true;
-  fonts.fontconfig.defaultFonts.monospace = [ "JetBrainsMono Nerd Font" ];
-
-  programs.fastfetch.enable = true;
-  programs.fish.shellAliases.fastfetch = "fastfetch --config examples/25 --logo /home/army/Pictures/Castorice/castorice-ansi";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "25.05";
