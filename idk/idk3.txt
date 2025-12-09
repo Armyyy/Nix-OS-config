@@ -1,4 +1,0 @@
- while true
-                                                     , figlet nigga | , lolcat
-                                                end
-
