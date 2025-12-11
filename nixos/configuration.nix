@@ -116,6 +116,10 @@
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
+
+  # mullvad-vpn
+  services.mullvad-vpn.enable = true;
+
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
@@ -215,5 +219,4 @@
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.11"; # Did you read the comment?
-
 }
