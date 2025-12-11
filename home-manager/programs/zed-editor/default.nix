@@ -6,12 +6,77 @@
     ];
     # ~/.config/zed/settings.json
     userSettings = {
-      vim_mode = false;
+
+
+      auto_install_extensions = {
+        nix = true;
+      };
+
+
+      buffer_font_family = "JetBrainsMono Nerd Font";
+      buffer_font_features = {
+        calt = false;
+      };
+      buffer_font_size = 16;
+      buffer_font_weight = 200;
+      buffer_line_height = {
+        custom = 1.2;
+      };
+
+
       diagnostics = {
         inline = {
           enabled = true;
         };
       };
+
+
+      gutter = {
+        line_numbers = true;
+        runnables = false; # Disable runnable/test buttons
+        breakpoints = false; # Hide breakpoint markers
+        folds = false; # Remove fold arrows
+        min_line_number_digits = 2;
+      };
+
+
+      icon_theme = "Catppuccin Mocha";
+
+
+      inline_code_actions = true;
+
+
+      project_panel = {
+        default_width = 110;
+        dock = "right";
+        entry_spacing = "standard";
+        indent_size = 10;
+      };
+
+
+      relative_line_numbers = "disabled";
+
+
+      scrollbar = {
+        axes = {
+          horizontal = false;
+          vertical = true;
+        };
+      };
+
+
+      show_completions_on_input = true;
+
+
+
+      tabs = {
+        file_icons = true;
+        git_status = true;
+        show_close_button = "hidden";
+        show_diagnostics = "all";
+      };
+
+
       terminal = {
         font_size = 12;
         font_family = "JetBrainsMono Nerd Font";
@@ -20,54 +85,24 @@
           custom = 1.2;
         };
       };
-      buffer_font_family = "JetBrainsMono Nerd Font";
-      ui_font_family = ".ZedSans";
-      inline_code_actions = true;
-      gutter = {
-        line_numbers = true;
-        runnables = false; # Disable runnable/test buttons
-        breakpoints = false; # Hide breakpoint markers
-        folds = false; # Remove fold arrows
-        min_line_number_digits = 2;
-      };
-      relative_line_numbers = "disabled";
-      project_panel = {
-        default_width = 110;
-        dock = "right";
-        entry_spacing = "standard";
-        indent_size = 10;
-      };
-      tabs = {
-        file_icons = true;
-        git_status = true;
-        show_close_button = "hidden";
-        show_diagnostics = "all";
-      };
-      ui_font_size = 14;
-      buffer_font_size = 16;
-      buffer_line_height = {
-        custom = 1.2;
-      };
-      buffer_font_features = {
-        calt = false;
-      };
-      buffer_font_weight = 200;
+
+
+      theme = "Tokyo Night";
+
+
       toolbar = {
         breadcrumbs = false;
         quick_actions = false;
       };
-      theme = "Tokyo Night";
-      icon_theme = "Catppuccin Mocha";
-      auto_install_extensions = {
-        nix = true;
-      };
-      show_completions_on_input = true;
-      scrollbar = {
-        axes = {
-          horizontal = false;
-          vertical = true;
-        };
-      };
+
+
+      ui_font_family = ".ZedSans";
+      ui_font_size = 14;
+
+
+      vim_mode = false;
+
+
     };
   };
 }
