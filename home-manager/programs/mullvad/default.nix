@@ -1,0 +1,5 @@
+{
+  programs.mullvad = {
+    enable = true;
+  };
+}
