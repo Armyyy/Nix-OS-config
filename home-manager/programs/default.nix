@@ -11,10 +11,12 @@
     ./git
     ./libreoffice
     ./mission-center
+    ./mullvad-vpn
     ./nh
     ./nix-index
     ./nix-index-database-comma
     ./nix-your-shell
+    ./oh-my-posh
     ./yazi
     ./zed-editor
   ];
