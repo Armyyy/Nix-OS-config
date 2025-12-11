@@ -16,6 +16,7 @@
     ./nix-index
     ./nix-index-database-comma
     ./nix-your-shell
+    ./starship
     ./yazi
     ./zed-editor
   ];
