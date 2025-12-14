@@ -13,5 +13,6 @@
       selection-background = "cell-foreground";
 
       custom-shader = "/home/army/Documents/nix-config/home-manager/programs/ghostty/shaders/cursor-blaze.glsl";
+    };
   };
 }
