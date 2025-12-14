@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   programs.ghostty = {
     enable = true;
@@ -11,7 +12,6 @@
       selection-foreground = "cell-background";
       selection-background = "cell-foreground";
 
-      custom-shader = "./ghostty-shaders/in-game-crt.glsl";
-    };
+      custom-shader = "/home/army/Documents/nix-config/home-manager/programs/ghostty/shaders/cursor-blaze.glsl";
   };
 }
