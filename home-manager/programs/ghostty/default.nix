@@ -10,6 +10,8 @@
 
       selection-foreground = "cell-background";
       selection-background = "cell-foreground";
+
+      custom-shader = "./ghostty-shaders/in-game-crt.glsl";
     };
   };
 }
