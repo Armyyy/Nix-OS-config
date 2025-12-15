@@ -12,6 +12,7 @@
     ./libreoffice
     ./mission-center
     ./mullvad-vpn
+    ./neovim
     ./nh
     ./nix-index
     ./nix-index-database-comma
