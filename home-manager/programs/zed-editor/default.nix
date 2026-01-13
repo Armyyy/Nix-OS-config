@@ -32,7 +32,7 @@
       };
 
       gutter = {
-        line_numbers = true;
+        line_numbers = false;
         runnables = false; # Disable runnable/test buttons
         breakpoints = false; # Hide breakpoint markers
         folds = false; # Remove fold arrows
@@ -44,7 +44,7 @@
       inline_code_actions = true;
 
       project_panel = {
-        default_width = 110;
+        default_width = 120;
         dock = "right";
         entry_spacing = "standard";
         indent_size = 10;
@@ -68,6 +68,10 @@
         show_diagnostics = "all";
       };
 
+      tab_bar = {
+        show = false;
+      };
+
       terminal = {
         font_size = 12;
         font_family = "JetBrainsMono Nerd Font";
@@ -85,10 +89,11 @@
       };
 
       ui_font_family = ".ZedSans";
-      ui_font_size = 14;
+      ui_font_size = 16;
 
-      vim_mode = false;
+      vim_mode = true;
 
+      vertical_scroll_margin = 0;
     };
   };
 }
