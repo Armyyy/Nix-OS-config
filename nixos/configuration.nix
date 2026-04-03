@@ -201,7 +201,28 @@
   # putty
   environment.systemPackages = [
     pkgs.putty
+    pkgs.tor-browser
+    pkgs.docker
+    pkgs.gitlab-runner
   ];
+
+  services.tor = {
+    enable = true;
+    client.enable = true;
+
+    relay.onionServices.myGoSite = {
+      version = 3;
+      map = [
+        {
+          port = 80;
+          target = {
+            addr = "127.0.0.1";
+            port = 8080;
+          };
+        }
+      ];
+    };
+  };
 
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.
