@@ -20,6 +20,7 @@
     ./nix-your-shell
     ./postman
     ./starship
+    ./tableplus
     ./yazi
     ./zed-editor
   ];

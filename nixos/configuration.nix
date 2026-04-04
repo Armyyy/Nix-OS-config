@@ -193,6 +193,7 @@
         "networkmanager"
         "wheel"
         "wireshark"
+        "docker"
       ];
       shell = pkgs.fish;
     };
@@ -206,8 +207,11 @@
     pkgs.gitlab-runner
     pkgs.sqlc
     pkgs.goose
-    pkgs.goose-cli
+    # pkgs.goose-cli
   ];
+
+  #docker virtualisation
+  virtualisation.docker.enable = true;
 
   services.tor = {
     enable = true;
