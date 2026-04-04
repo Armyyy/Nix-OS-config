@@ -7,6 +7,7 @@
     ./eza
     ./fastfetch
     ./fish
+    ./freetube
     ./ghostty
     ./git
     ./libreoffice
