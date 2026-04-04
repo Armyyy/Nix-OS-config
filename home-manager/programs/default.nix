@@ -17,6 +17,7 @@
     ./nh
     ./nix-index
     ./nix-index-database-comma
+    ./nix-ld
     ./nix-your-shell
     ./postman
     ./starship
