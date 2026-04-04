@@ -204,6 +204,9 @@
     pkgs.tor-browser
     pkgs.docker
     pkgs.gitlab-runner
+    pkgs.sqlc
+    pkgs.goose
+    pkgs.goose-cli
   ];
 
   services.tor = {

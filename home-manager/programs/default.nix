@@ -21,6 +21,6 @@
     ./postman
     ./starship
     ./yazi
-    #./zed-editor
+    ./zed-editor
   ];
 }
