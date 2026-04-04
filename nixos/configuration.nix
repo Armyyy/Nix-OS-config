@@ -207,6 +207,7 @@
     pkgs.gitlab-runner
     pkgs.sqlc
     pkgs.goose
+    pkgs.tableplus
     # pkgs.goose-cli
   ];
 
