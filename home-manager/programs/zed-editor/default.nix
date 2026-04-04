@@ -69,7 +69,7 @@
       };
 
       tab_bar = {
-        show = false;
+        show = true;
       };
 
       terminal = {
