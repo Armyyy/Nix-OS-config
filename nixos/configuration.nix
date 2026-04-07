@@ -206,6 +206,7 @@
     pkgs.gitlab-runner
     pkgs.sqlc
     pkgs.goose
+    pkgs.redis
     # pkgs.goose-cli
   ];
 
