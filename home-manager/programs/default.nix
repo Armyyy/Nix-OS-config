@@ -1,6 +1,7 @@
 {
   imports = [
     ./brave
+    ./claude-code
     ./devenv
     ./direnv
     ./discord
