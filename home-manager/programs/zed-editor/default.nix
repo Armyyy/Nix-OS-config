@@ -43,11 +43,15 @@
 
       inline_code_actions = true;
 
+      features = {
+        edit_prediction_provider = "supermaven";
+      };
+
       project_panel = {
-        default_width = 120;
+        default_width = 200;
         dock = "right";
         entry_spacing = "standard";
-        indent_size = 10;
+        indent_size = 16;
       };
 
       relative_line_numbers = "disabled";
@@ -73,7 +77,7 @@
       };
 
       terminal = {
-        font_size = 12;
+        font_size = 16;
         font_family = "JetBrainsMono Nerd Font";
         font_weight = 100;
         line_height = {
@@ -81,7 +85,9 @@
         };
       };
 
-      theme = "Tokyo Night";
+      # theme = "Tokyo Night";
+      # theme = "minimalistPurple";
+      theme = "Neo Dark Horizon";
 
       toolbar = {
         breadcrumbs = false;
@@ -89,7 +95,7 @@
       };
 
       ui_font_family = ".ZedSans";
-      ui_font_size = 16;
+      ui_font_size = 20;
 
       vim_mode = true;
 
