@@ -19,6 +19,7 @@
     ./nix-index
     ./nix-index-database-comma
     ./nix-your-shell
+    ./pgcli
     ./postman
     ./starship
     ./yazi

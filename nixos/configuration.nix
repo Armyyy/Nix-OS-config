@@ -199,14 +199,17 @@
     };
   };
 
-  environment.systemPackages = [
-    pkgs.putty
-    pkgs.tor-browser
-    pkgs.docker
-    pkgs.gitlab-runner
-    pkgs.sqlc
-    pkgs.goose
-    pkgs.redis
+  environment.systemPackages = with pkgs; [
+    putty
+    tor-browser
+    docker
+    gitlab-runner
+    sqlc
+    goose
+    redis
+    postgresql
+    sqlite
+    sqlitebrowser
     # pkgs.goose-cli
   ];
 
