@@ -1,4 +1,14 @@
 {
+  xdg.configFile."zed/themes/srds-synthwave.json".source = ./themes/srds-synthwave.json;
+  xdg.configFile."zed/themes/baby-blue.json".source = ./themes/baby-blue.json;
+  xdg.configFile."zed/themes/dark-death.json".source = ./themes/dark-death.json;
+  xdg.configFile."zed/themes/minimalistPurple.json".source = ./themes/minimalistPurple.json;
+  xdg.configFile."zed/themes/neo-dark-horizon.json".source = ./themes/neo-dark-horizon.json;
+  xdg.configFile."zed/themes/wildberries.json".source = ./themes/wildberries.json;
+  xdg.configFile."zed/themes/nu-disco.json".source = ./themes/nu-disco.json;
+  xdg.configFile."zed/themes/cool-panda.json".source = ./themes/cool-panda.json;
+  xdg.configFile."zed/themes/ayu.json".source = ./themes/ayu.json;
+
   programs.zed-editor = {
     enable = true;
     extensions = [
@@ -16,7 +26,7 @@
         calt = false;
       };
       buffer_font_size = 16;
-      buffer_font_weight = 200;
+      buffer_font_weight = 300;
       buffer_line_height = {
         custom = 1.2;
       };
@@ -39,7 +49,7 @@
         min_line_number_digits = 2;
       };
 
-      icon_theme = "Catppuccin Mocha";
+      icon_theme = "Material Icon Theme";
 
       inline_code_actions = true;
 
@@ -51,7 +61,7 @@
         default_width = 200;
         dock = "right";
         entry_spacing = "standard";
-        indent_size = 16;
+        indent_size = 20;
       };
 
       relative_line_numbers = "disabled";
@@ -77,25 +87,34 @@
       };
 
       terminal = {
-        font_size = 16;
+        default_height = 2000;
+        font_size = 12;
         font_family = "JetBrainsMono Nerd Font";
-        font_weight = 100;
+        font_weight = 300;
         line_height = {
-          custom = 1.2;
+          custom = 1.1;
         };
       };
 
       # theme = "Tokyo Night";
       # theme = "minimalistPurple";
       theme = "Neo Dark Horizon";
+      # theme = "Baby Blue";
+      # theme = "SRD's Synthwave Dark";
+      # theme = "Wildberries Darker";
+      # theme = "Nu Disco";
+      # theme = "Cool Panda";
+      # theme = "Ayu Dark";
+      # theme = "Catppuccin Mocha";
+      # theme = "One Dark Pro";
 
       toolbar = {
         breadcrumbs = false;
         quick_actions = false;
       };
 
-      ui_font_family = ".ZedSans";
-      ui_font_size = 20;
+      ui_font_family = "JetBrainsMono Nerd Font";
+      ui_font_size = 16;
 
       vim_mode = true;
 

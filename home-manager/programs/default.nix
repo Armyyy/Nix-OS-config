@@ -22,6 +22,7 @@
     ./pgcli
     ./postman
     ./starship
+    ./tmux
     ./yazi
     ./zed-editor
   ];

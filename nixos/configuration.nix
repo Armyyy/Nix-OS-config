@@ -210,6 +210,9 @@
     postgresql
     sqlite
     sqlitebrowser
+    bruno
+    xclip
+    # nodejs_20
     # pkgs.goose-cli
   ];
 
