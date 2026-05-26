@@ -6,6 +6,9 @@
         name = "Tanatip Jindamanee";
         email = "armyhamumu@gmail.com";
       };
+      core = {
+        editor = "nvim";
+      };
     };
   };
 }

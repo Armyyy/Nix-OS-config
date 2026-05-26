@@ -168,6 +168,7 @@
   };
 
   programs.fish.enable = true;
+  programs.nix-ld.enable = true; # run generic Linux binaries (e.g. Zed LSP extensions)
   programs.wireshark = {
     enable = true;
     package = pkgs.wireshark;
@@ -200,20 +201,30 @@
   };
 
   environment.systemPackages = with pkgs; [
-    putty
-    tor-browser
-    docker
     gitlab-runner
-    sqlc
-    goose
-    redis
     postgresql
-    sqlite
-    sqlitebrowser
-    bruno
-    xclip
+    redis
+
+    ### uninstalled
     # nodejs_20
     # pkgs.goose-cli
+
+    ### moved to home-manager
+    # bat
+    # bruno
+    # bruno-cli
+    # goose
+    # peco
+    # putty
+    # sqlc
+    # sqlite
+    # sqlitebrowser
+    # tgpt
+    # tor-browser
+    # xclip
+
+    ### redundant
+    # docker  # "virtualisation.docker.enable = true;" already enabled docker
   ];
 
   #docker virtualisation

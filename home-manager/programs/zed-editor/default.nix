@@ -1,13 +1,16 @@
+{ pkgs, ... }:
 {
-  xdg.configFile."zed/themes/srds-synthwave.json".source = ./themes/srds-synthwave.json;
-  xdg.configFile."zed/themes/baby-blue.json".source = ./themes/baby-blue.json;
-  xdg.configFile."zed/themes/dark-death.json".source = ./themes/dark-death.json;
-  xdg.configFile."zed/themes/minimalistPurple.json".source = ./themes/minimalistPurple.json;
-  xdg.configFile."zed/themes/neo-dark-horizon.json".source = ./themes/neo-dark-horizon.json;
-  xdg.configFile."zed/themes/wildberries.json".source = ./themes/wildberries.json;
-  xdg.configFile."zed/themes/nu-disco.json".source = ./themes/nu-disco.json;
-  xdg.configFile."zed/themes/cool-panda.json".source = ./themes/cool-panda.json;
+  home.packages = [ pkgs.nil ];
+
   xdg.configFile."zed/themes/ayu.json".source = ./themes/ayu.json;
+  xdg.configFile."zed/themes/baby-blue.json".source = ./themes/baby-blue.json;
+  xdg.configFile."zed/themes/cool-panda.json".source = ./themes/cool-panda.json;
+  xdg.configFile."zed/themes/dark-death.json".source = ./themes/dark-death.json;
+  xdg.configFile."zed/themes/minimalist-purple.json".source = ./themes/minimalist-purple.json;
+  xdg.configFile."zed/themes/neo-dark-horizon.json".source = ./themes/neo-dark-horizon.json;
+  xdg.configFile."zed/themes/nu-disco.json".source = ./themes/nu-disco.json;
+  xdg.configFile."zed/themes/srds-synthwave.json".source = ./themes/srds-synthwave.json;
+  xdg.configFile."zed/themes/wildberries.json".source = ./themes/wildberries.json;
 
   programs.zed-editor = {
     enable = true;
@@ -46,7 +49,7 @@
         runnables = false; # Disable runnable/test buttons
         breakpoints = false; # Hide breakpoint markers
         folds = false; # Remove fold arrows
-        min_line_number_digits = 2;
+        # min_line_number_digits = 2; # comment this out for left most
       };
 
       icon_theme = "Material Icon Theme";
@@ -54,11 +57,11 @@
       inline_code_actions = true;
 
       features = {
-        edit_prediction_provider = "supermaven";
+        edit_prediction_provider = "zed";
       };
 
       project_panel = {
-        default_width = 200;
+        default_width = 400;
         dock = "right";
         entry_spacing = "standard";
         indent_size = 20;
@@ -86,8 +89,12 @@
         show = true;
       };
 
+      status_bar = {
+        show_active_file = true;
+      };
+
       terminal = {
-        default_height = 2000;
+        default_height = 600;
         font_size = 12;
         font_family = "JetBrainsMono Nerd Font";
         font_weight = 300;
@@ -96,17 +103,23 @@
         };
       };
 
+      ### included themes
+      # theme = "Catppuccin Mocha";
       # theme = "Tokyo Night";
-      # theme = "minimalistPurple";
-      theme = "Neo Dark Horizon";
+      # theme = "One Dark Pro";
+      # theme = "The Dark Side";
+      # theme = "Smooth Dark";
+
+      ### installed custom themes
+      # theme = "Ayu Dark";
       # theme = "Baby Blue";
+      # theme = "Cool Panda";
+      # theme = "Dark Death";
+      # theme = "Minimalist Purple";
+      theme = "Neo Dark Horizon";
+      # theme = "Nu Disco";
       # theme = "SRD's Synthwave Dark";
       # theme = "Wildberries Darker";
-      # theme = "Nu Disco";
-      # theme = "Cool Panda";
-      # theme = "Ayu Dark";
-      # theme = "Catppuccin Mocha";
-      # theme = "One Dark Pro";
 
       toolbar = {
         breadcrumbs = false;
@@ -119,6 +132,12 @@
       vim_mode = true;
 
       vertical_scroll_margin = 0;
+
+      lsp = {
+        nil = {
+          binary.path = "${pkgs.nil}/bin/nil";
+        };
+      };
     };
   };
 }

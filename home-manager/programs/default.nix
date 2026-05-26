@@ -1,6 +1,9 @@
 {
   imports = [
+    ./bat
     ./brave
+    ./bruno
+    ./bruno-cli
     ./claude-code
     ./devenv
     ./direnv
@@ -11,6 +14,8 @@
     ./freetube
     ./ghostty
     ./git
+    ./goose
+    ./lazygit
     ./libreoffice
     ./mission-center
     ./mullvad-vpn
@@ -18,11 +23,22 @@
     ./nh
     ./nix-index
     ./nix-index-database-comma
+    ./nix-tree
     ./nix-your-shell
+    ./peco
     ./pgcli
     ./postman
+    ./putty
+    ./ripgrep
+    ./sqlc
+    ./sqlite
+    ./sqlitebrowser
     ./starship
+    ./television
+    ./tgpt
     ./tmux
+    ./tor-browser
+    ./xclip
     ./yazi
     ./zed-editor
   ];
