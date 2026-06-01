@@ -5,13 +5,16 @@
     ./bruno
     ./bruno-cli
     ./claude-code
+    ./csvlens
     ./devenv
     ./direnv
     ./discord
     ./eza
     ./fastfetch
+    ./fd
     ./fish
     ./freetube
+    ./fzf
     ./ghostty
     ./git
     ./goose
