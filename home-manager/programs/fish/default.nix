@@ -66,6 +66,10 @@
         body = builtins.readFile ./functions/tbd.fish;
         description = "delete tmux buffers via fzf multi-select";
       };
+      pPath = {
+        body = builtins.readFile ./functions/pPath.fish;
+        description = "show PATH entries one per line, nix store dimmed";
+      };
     };
     shellAliases = import ./conf.d/aliases.nix;
     shellInit = builtins.readFile ./conf.d/init.fish;
