@@ -2,6 +2,10 @@
   programs.fish = {
     enable = true;
     functions = {
+      fish_command_not_found = {
+        body = builtins.readFile ./functions/fish_command_not_found.fish;
+        description = "command not found handler with nix-index lookup and 10min cache";
+      };
       hpick = {
         body = builtins.readFile ./functions/hpick.fish;
         description = "copy history entry to clipboard via fzf";
