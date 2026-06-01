@@ -2,6 +2,51 @@
 {
   home.packages = [ pkgs.nil ];
 
+  xdg.configFile."zed/keymap.json".text = builtins.toJSON [
+    {
+      bindings = {
+        "ctrl-j" = null; # unbind — conflicts with fzf ctrl-j (select next)
+      };
+    }
+    {
+      context = "Workspace";
+      bindings = {
+        "alt-h" = "workspace::ActivatePaneLeft";
+        "alt-l" = "workspace::ActivatePaneRight";
+        "alt-k" = "workspace::ActivatePaneUp";
+        "alt-j" = "workspace::ActivatePaneDown";
+      };
+    }
+    {
+      context = "Terminal";
+      bindings = {
+        # "shift-enter" = [ "terminal::SendText" "\r" ];
+      };
+    }
+    {
+      context = "AssistantPanel";
+      bindings = {
+        "escape" = "workspace::ActivatePaneLeft";
+      };
+    }
+    {
+      context = "Editor && vim_mode == normal";
+      bindings = {
+        /*
+          "space h" = [
+            "tab_switcher::Toggle"
+            { select_last = true; }
+          ];
+          "space l" = "tab_switcher::Toggle";
+        */
+
+        "space j" = "pane::ActivatePreviousItem";
+        "space k" = "pane::ActivateNextItem";
+        "space w" = "editor::ToggleSoftWrap";
+      };
+    }
+  ];
+
   xdg.configFile."zed/themes/ayu.json".source = ./themes/ayu.json;
   xdg.configFile."zed/themes/baby-blue.json".source = ./themes/baby-blue.json;
   xdg.configFile."zed/themes/cool-panda.json".source = ./themes/cool-panda.json;
@@ -16,6 +61,7 @@
     enable = true;
     extensions = [
       "nix"
+      "rainbow-csv"
     ];
     # ~/.config/zed/settings.json
     userSettings = {
@@ -42,6 +88,8 @@
 
       "experimental.theme_overrides" = {
         "terminal.background" = "#000000";
+        "search.match_background" = "#ae56e940"; # word-width box on all matches
+        "editor.active_line.background" = "#1a0d35"; # visible row highlight on cursor line
       };
 
       gutter = {
@@ -49,6 +97,7 @@
         runnables = false; # Disable runnable/test buttons
         breakpoints = false; # Hide breakpoint markers
         folds = false; # Remove fold arrows
+        bookmarks = false;
         # min_line_number_digits = 2; # comment this out for left most
       };
 
@@ -116,8 +165,8 @@
       # theme = "Cool Panda";
       # theme = "Dark Death";
       # theme = "Minimalist Purple";
-      theme = "Neo Dark Horizon";
-      # theme = "Nu Disco";
+      # theme = "Neo Dark Horizon";
+      theme = "Nu Disco";
       # theme = "SRD's Synthwave Dark";
       # theme = "Wildberries Darker";
 
@@ -132,6 +181,18 @@
       vim_mode = true;
 
       vertical_scroll_margin = 0;
+
+      languages = {
+        "Plain Text" = {
+          soft_wrap = "none"; # No visual line wrap, scroll horizontally instead
+        };
+        "CSV" = {
+          soft_wrap = "none";
+        };
+        "TSV" = {
+          soft_wrap = "none";
+        };
+      };
 
       lsp = {
         nil = {
