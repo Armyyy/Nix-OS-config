@@ -16,11 +16,11 @@ end
 
 set -l sorted (printf "%s\n" $rows | sort)
 
-set -l header (printf "%-20s  %-10s  %s" COMMAND TYPE DESCRIPTION)
+set -l header (printf "%-25s  %-10s  %s" COMMAND TYPE DESCRIPTION)
 set -l picked (
     for row in $sorted
         set -l parts (string split -m 2 (printf "\t") $row)
-        printf "%-20s  %-10s  %s\n" $parts[1] $parts[2] $parts[3]
+        printf "%-25s  %-10s  %s\n" $parts[1] $parts[2] $parts[3]
     end | fzf --header="$header" --reverse --height=~100% --prompt="aflist: "
 )
 if test -n "$picked"
