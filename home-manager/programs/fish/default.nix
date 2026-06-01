@@ -50,6 +50,10 @@
         body = builtins.readFile ./functions/alist.fish;
         description = "list shell aliases with fzf picker or --csv for csvlens view";
       };
+      aflist = {
+        body = builtins.readFile ./functions/aflist.fish;
+        description = "list all aliases and functions with type and description, sorted alphabetically";
+      };
       tls = {
         body = builtins.readFile ./functions/tls.fish;
         description = "list tmux sessions with csvlens viewer";
