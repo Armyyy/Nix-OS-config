@@ -1,6 +1,6 @@
 {
   # eza
-  ls = "eza --tree --level=1 -a";
+  ls = "eza --tree --level=1";
 
   # tmux
   # git
