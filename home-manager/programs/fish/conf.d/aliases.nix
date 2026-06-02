@@ -1,4 +1,7 @@
 {
+  # general
+  et = "exit";
+
   # eza
   ls = "eza --tree --level=1";
 
