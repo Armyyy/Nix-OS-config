@@ -78,8 +78,8 @@
         body = builtins.readFile ./functions/pPath.fish;
         description = "show PATH entries one per line, nix store dimmed";
       };
-      ypath = {
-        body = builtins.readFile ./functions/ypath.fish;
+      yp = {
+        body = builtins.readFile ./functions/yp.fish;
         description = "fuzzy find file/dir and yank path to clipboard";
       };
     };
