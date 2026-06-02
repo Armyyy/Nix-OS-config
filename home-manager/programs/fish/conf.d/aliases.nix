@@ -2,6 +2,9 @@
   # eza
   ls = "eza --tree --level=1";
 
+  # fish
+  ef = "exec fish";
+
   # tmux
   # git
   gst = "git status";

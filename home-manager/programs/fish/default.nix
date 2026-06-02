@@ -74,6 +74,10 @@
         body = builtins.readFile ./functions/pPath.fish;
         description = "show PATH entries one per line, nix store dimmed";
       };
+      ypath = {
+        body = builtins.readFile ./functions/ypath.fish;
+        description = "fuzzy find file/dir and yank path to clipboard";
+      };
     };
     shellAliases = import ./conf.d/aliases.nix;
     shellInit = builtins.readFile ./conf.d/init.fish;
