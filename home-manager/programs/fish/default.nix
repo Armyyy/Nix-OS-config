@@ -70,6 +70,10 @@
         body = builtins.readFile ./functions/tbd.fish;
         description = "delete tmux buffers via fzf multi-select";
       };
+      nhs = {
+        body = builtins.readFile ./functions/nhs.fish;
+        description = "nh os switch -a, reload tmux config, reload fish shell";
+      };
       pPath = {
         body = builtins.readFile ./functions/pPath.fish;
         description = "show PATH entries one per line, nix store dimmed";
