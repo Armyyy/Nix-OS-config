@@ -10,6 +10,7 @@ end
 alias | while read -l line
     set -l name (string match -rg "^alias (\S+)" $line)
     set -l val  (string match -rg "^alias \S+ '(.*)'" $line)
+    test -z "$val"; and set val (string match -rg "^alias \S+ (\S+)\$" $line)
     test -z "$val"; and set val —
     test -n "$name"; and set -a rows (printf "%s\talias\t%s" $name $val)
 end

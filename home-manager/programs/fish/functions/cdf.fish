@@ -1,6 +1,10 @@
 # cdf - cd to a directory using fzf and eza
-argparse 'hidden' -- $argv
-set fd_args --exclude .git . $HOME
+argparse 'hidden' 'home' -- $argv
+if set -q _flag_home
+    set fd_args --exclude .git . $HOME
+else
+    set fd_args --exclude .git .
+end
 if set -q _flag_hidden
     set fd_args --hidden $fd_args
 end

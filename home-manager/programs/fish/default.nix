@@ -32,7 +32,7 @@
       };
       cdf = {
         body = builtins.readFile ./functions/cdf.fish;
-        description = "fuzzy cd to any dir or file parent under HOME";
+        description = "fuzzy cd; defaults to cwd, --home for HOME, --hidden for dotfiles";
       };
       dps = {
         body = builtins.readFile ./functions/dps.fish;

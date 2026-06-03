@@ -1,5 +1,6 @@
 {
   # general
+  cl = "clear";
   et = "exit";
 
   # eza
