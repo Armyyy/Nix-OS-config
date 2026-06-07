@@ -184,6 +184,8 @@
 
   networking.hostName = "a-legion";
 
+  users.users."qemu-libvirtd".extraGroups = [ "render" "video" ];
+
   users.users = {
     army = {
       isNormalUser = true;
@@ -195,6 +197,7 @@
         "wheel"
         "wireshark"
         "docker"
+        "libvirtd"
       ];
       shell = pkgs.fish;
     };
@@ -204,6 +207,7 @@
     gitlab-runner
     postgresql
     redis
+    swtpm
 
     ### uninstalled
     # nodejs_20
@@ -229,6 +233,13 @@
 
   #docker virtualisation
   virtualisation.docker.enable = true;
+
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.swtpm.enable = true;
+    qemu.runAsRoot = false;
+  };
+  virtualisation.spiceUSBRedirection.enable = true;
 
   services.tor = {
     enable = true;

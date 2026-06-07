@@ -32,6 +32,7 @@
     ./pgcli
     ./postman
     ./putty
+    ./qemu-kvm
     ./ripgrep
     ./sqlc
     ./sqlite

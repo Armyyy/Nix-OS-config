@@ -21,6 +21,10 @@
       context = "Terminal";
       bindings = {
         # "shift-enter" = [ "terminal::SendText" "\r" ];
+        "alt-space" = [
+          "terminal::SendText"
+          " "
+        ];
       };
     }
     {
@@ -165,8 +169,8 @@
       # theme = "Cool Panda";
       # theme = "Dark Death";
       # theme = "Minimalist Purple";
-      # theme = "Neo Dark Horizon";
-      theme = "Nu Disco";
+      theme = "Neo Dark Horizon";
+      # theme = "Nu Disco";
       # theme = "SRD's Synthwave Dark";
       # theme = "Wildberries Darker";
 
@@ -176,7 +180,7 @@
       };
 
       ui_font_family = "JetBrainsMono Nerd Font";
-      ui_font_size = 16;
+      ui_font_size = 18;
 
       vim_mode = true;
 
