@@ -8,6 +8,8 @@ nh home switch       # home-manager only
 nh os switch -a      # full NixOS system
 ```
 
+Never run `nh home switch` or `nh os switch` — user applies changes themselves.
+
 ## Structure
 ```
 flake.nix                        # flake entry point
