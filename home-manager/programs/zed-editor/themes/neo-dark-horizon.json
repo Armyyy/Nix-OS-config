@@ -27,7 +27,7 @@
         "deleted.background": null,
         "deleted.border": null,
         "drop_target.background": "#6C6F9380",
-        "editor.active_line.background": "#080808",
+        "editor.active_line.background": "#3d2040",
         "editor.active_line_number": null,
         "editor.active_wrap_guide": "#FED701",
         "editor.background": "#0e0e0e",
@@ -152,7 +152,7 @@
           {
             "background": "transparent",
             "selection": "#a42aeb3d",
-            "cursor": "#a9dc7660"
+            "cursor": "#6c3f72"
           }
         ],
         "syntax": {
