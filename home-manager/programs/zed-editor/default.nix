@@ -93,7 +93,8 @@
       "experimental.theme_overrides" = {
         "terminal.background" = "#000000";
         "search.match_background" = "#ae56e940"; # word-width box on all matches
-        "editor.active_line.background" = "#1a0d35"; # visible row highlight on cursor line
+        "editor.active_line.background" = "#3d2040"; # visible row highlight on cursor line
+        "editor.caret" = "#6c3f72";
       };
 
       gutter = {
@@ -180,7 +181,7 @@
       };
 
       ui_font_family = "JetBrainsMono Nerd Font";
-      ui_font_size = 18;
+      ui_font_size = 16;
 
       vim_mode = true;
 
