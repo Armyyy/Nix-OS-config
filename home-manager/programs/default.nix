@@ -23,6 +23,7 @@
     ./mission-center
     ./mullvad-vpn
     ./neovim
+    ./ngrok
     ./nh
     ./nix-index
     ./nix-index-database-comma
