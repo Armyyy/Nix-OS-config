@@ -38,6 +38,10 @@
         body = builtins.readFile ./functions/dps.fish;
         description = "docker ps with csvlens viewer";
       };
+      drm = {
+        body = builtins.readFile ./functions/drm.fish;
+        description = "remove stopped containers; --pick for fzf multi-select stop+rm";
+      };
       fipre = {
         body = builtins.readFile ./functions/fipre.fish;
         description = "fuzzy find files with bat preview";

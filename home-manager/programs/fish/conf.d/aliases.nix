@@ -17,5 +17,4 @@
   gcm = "git commit -m ";
 
   # docker
-  drm = "docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)";
 }
