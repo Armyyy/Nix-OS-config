@@ -31,6 +31,7 @@
     ./nix-your-shell
     ./peco
     ./pgcli
+    ./playwright
     ./postman
     ./putty
     ./qemu-kvm
