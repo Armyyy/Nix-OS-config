@@ -169,6 +169,7 @@
 
   programs.fish.enable = true;
   programs.nix-ld.enable = true; # run generic Linux binaries (e.g. Zed LSP extensions)
+  programs.nix-ld.libraries = with pkgs; [ stdenv.cc.cc zlib ];
   programs.wireshark = {
     enable = true;
     package = pkgs.wireshark;
