@@ -7,7 +7,7 @@
 let
   # Custom statusline. Reads session JSON on stdin (Claude Code >=2.1) and the
   # caveman flag file, renders:
-  #   [CAVEMAN] │ 🔌 mcp,names │ Model │ 5h NN% ↻HH:MM │ 🧠 NN%
+  #   [CAVEMAN] │ 🔌 mcp,names │ Model │ NN% ↻HH:MM │ 🧠 NN%
   statuslineScript = pkgs.writeShellScript "claude-statusline" ''
     set -u
     input=$(cat)

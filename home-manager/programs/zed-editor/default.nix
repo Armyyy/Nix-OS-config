@@ -109,10 +109,6 @@
 
       inline_code_actions = true;
 
-      features = {
-        edit_prediction_provider = "zed";
-      };
-
       project_panel = {
         default_width = 400;
         dock = "right";
@@ -189,12 +185,6 @@
       languages = {
         "Plain Text" = {
           soft_wrap = "none"; # No visual line wrap, scroll horizontally instead
-        };
-        "CSV" = {
-          soft_wrap = "none";
-        };
-        "TSV" = {
-          soft_wrap = "none";
         };
       };
 

@@ -29,6 +29,7 @@
     ./nix-index-database-comma
     ./nix-tree
     ./nix-your-shell
+    ./ocaml
     ./peco
     ./pgcli
     ./playwright
