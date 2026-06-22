@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   lib,
   ...
 }:
@@ -34,7 +33,7 @@ in
         '.mcpServers.playwright = {
           "type": "stdio",
           "command": $npx,
-          "args": ["-y", "@playwright/mcp@0.0.69"],
+          "args": ["-y", "@playwright/mcp@0.0.69", "--isolated", "--browser", "chromium"],
           "env": {
             "PLAYWRIGHT_BROWSERS_PATH": $browsers,
             "PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS": "true",
