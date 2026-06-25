@@ -9,6 +9,7 @@
     ./devenv
     ./direnv
     ./discord
+    ./dune
     ./eza
     ./fastfetch
     ./fd
