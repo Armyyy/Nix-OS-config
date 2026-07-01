@@ -86,6 +86,18 @@
         body = builtins.readFile ./functions/yp.fish;
         description = "fuzzy find file/dir and yank path to clipboard";
       };
+      ocaml = {
+        body = builtins.readFile ./functions/ocaml.fish;
+        description = "OCaml REPL with vi-mode line editing via rlwrap";
+      };
+      copyfile = {
+        body = builtins.readFile ./functions/copyfile.fish;
+        description = "stash file/dir path(s) in universal clipboard var; paste with pastefile";
+      };
+      pastefile = {
+        body = builtins.readFile ./functions/pastefile.fish;
+        description = "cp -r the copyfile clipboard into cwd (or given dest dir)";
+      };
     };
     shellAliases = import ./conf.d/aliases.nix;
     shellInit = builtins.readFile ./conf.d/init.fish;

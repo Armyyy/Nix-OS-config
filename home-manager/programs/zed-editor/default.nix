@@ -44,8 +44,8 @@
           "space l" = "tab_switcher::Toggle";
         */
 
-        "space j" = "pane::ActivatePreviousItem";
-        "space k" = "pane::ActivateNextItem";
+        "space h" = "pane::ActivatePreviousItem";
+        "space l" = "pane::ActivateNextItem";
         "space w" = "editor::ToggleSoftWrap";
       };
     }

@@ -63,6 +63,7 @@ let
     model = "opus";
     alwaysThinkingEnabled = true;
     editorMode = "vim";
+    tui = "fullscreen";
     permissions = {
       defaultMode = "bypassPermissions";
     };

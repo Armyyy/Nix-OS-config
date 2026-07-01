@@ -121,6 +121,9 @@
   # mullvad-vpn
   services.mullvad-vpn.enable = true;
 
+  # flatpak (for Sober = Roblox on Linux)
+  services.flatpak.enable = true;
+
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.

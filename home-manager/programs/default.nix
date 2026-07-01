@@ -31,6 +31,7 @@
     ./nix-tree
     ./nix-your-shell
     ./ocaml
+    ./osu-lazer
     ./peco
     ./pgcli
     ./playwright
