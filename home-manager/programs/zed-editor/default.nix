@@ -192,6 +192,13 @@
         nil = {
           binary.path = "${pkgs.nil}/bin/nil";
         };
+        # use nix ocamllsp directly, bypass Zed's opam wrapper (no switch needed)
+        "ocaml-lsp" = {
+          binary = {
+            path = "${pkgs.ocamlPackages.ocaml-lsp}/bin/ocamllsp";
+            arguments = [ ];
+          };
+        };
       };
     };
   };

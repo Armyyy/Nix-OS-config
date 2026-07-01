@@ -18,6 +18,7 @@
     # inputs.hardware.nixosModules.common-ssd
     inputs.nixos-hardware.nixosModules.lenovo-legion-16ach6h
     inputs.home-manager.nixosModules.home-manager
+    inputs.nix-flatpak.nixosModules.nix-flatpak
 
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
@@ -121,8 +122,17 @@
   # mullvad-vpn
   services.mullvad-vpn.enable = true;
 
-  # flatpak (for Sober = Roblox on Linux)
-  services.flatpak.enable = true;
+  # flatpak (for Sober = Roblox on Linux), declarative via nix-flatpak
+  services.flatpak = {
+    enable = true;
+    remotes = [
+      {
+        name = "flathub";
+        location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+      }
+    ];
+    packages = [ "org.vinegarhq.Sober" ];
+  };
 
   services.xserver.enable = true;
 
@@ -170,12 +180,35 @@
     };
   };
 
+  # Expose system fonts to flatpak (Sober) — flatpak only scans /usr/local/share/fonts,
+  # which doesn't exist on NixOS. Bind-mount the nix font dir there.
+  system.fsPackages = [ pkgs.bindfs ];
+  fileSystems."/usr/local/share/fonts" = {
+    device = "/run/current-system/sw/share/X11/fonts";
+    fsType = "fuse.bindfs";
+    options = [
+      "ro"
+      "resolve-symlinks"
+      "x-gvfs-hide"
+    ];
+  };
+
   programs.fish.enable = true;
   programs.nix-ld.enable = true; # run generic Linux binaries (e.g. Zed LSP extensions)
   programs.nix-ld.libraries = with pkgs; [ stdenv.cc.cc zlib ];
   programs.wireshark = {
     enable = true;
     package = pkgs.wireshark;
+  };
+
+  # GNS3 network simulator backend. dynamips = Cisco IOS routers,
+  # vpcs = lightweight virtual PCs, ubridge = packet bridging (setcap raw sockets).
+  # docker + libvirtd (below) provide the qemu/container node backends.
+  services.gns3-server = {
+    enable = true;
+    vpcs.enable = true;
+    dynamips.enable = true;
+    ubridge.enable = true;
   };
 
   home-manager = {
@@ -202,6 +235,7 @@
         "wireshark"
         "docker"
         "libvirtd"
+        "ubridge"
       ];
       shell = pkgs.fish;
     };
@@ -209,6 +243,7 @@
 
   environment.systemPackages = with pkgs; [
     gitlab-runner
+    gns3-gui        # GNS3 frontend; talks to services.gns3-server
     postgresql
     redis
     swtpm

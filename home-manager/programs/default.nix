@@ -39,6 +39,8 @@
     ./putty
     ./qemu-kvm
     ./ripgrep
+    ./screen
+    ./sober
     ./sqlc
     ./sqlite
     ./sqlitebrowser

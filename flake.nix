@@ -22,6 +22,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Declarative flatpak (for Sober = Roblox on Linux)
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+
   };
 
   outputs =
