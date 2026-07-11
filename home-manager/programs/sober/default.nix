@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   # Sober (Roblox) is installed as a flatpak (see nixos/configuration.nix).
   # Its bundled GTK/Pango + cairo cannot instantiate variable fonts, so any
@@ -16,5 +16,13 @@
         </rejectfont>
       </selectfont>
     </fontconfig>
+  '';
+
+  # nix flake update rotates the /nix/store paths of the font files, which leaves
+  # Sober's persistent per-app fontconfig cache pointing at stale scans that still
+  # prefer the variable font -> tofu returns. Wipe the cache on every activation so
+  # fontconfig rebuilds it fresh (honouring the rejectfont rule above) on next launch.
+  home.activation.soberFontcacheReset = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    run rm -rf "$HOME/.var/app/org.vinegarhq.Sober/cache/fontconfig"
   '';
 }

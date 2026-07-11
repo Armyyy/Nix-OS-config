@@ -19,8 +19,10 @@
     ./ghostty
     ./git
     ./goose
+    ./helix
     ./lazygit
     ./libreoffice
+    ./mdformat
     ./mission-center
     ./mullvad-vpn
     ./neovim

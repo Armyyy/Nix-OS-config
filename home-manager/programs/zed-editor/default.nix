@@ -55,6 +55,7 @@
   xdg.configFile."zed/themes/baby-blue.json".source = ./themes/baby-blue.json;
   xdg.configFile."zed/themes/cool-panda.json".source = ./themes/cool-panda.json;
   xdg.configFile."zed/themes/dark-death.json".source = ./themes/dark-death.json;
+  xdg.configFile."zed/themes/gitlab-light.json".source = ./themes/gitlab-light.json;
   xdg.configFile."zed/themes/minimalist-purple.json".source = ./themes/minimalist-purple.json;
   xdg.configFile."zed/themes/neo-dark-horizon.json".source = ./themes/neo-dark-horizon.json;
   xdg.configFile."zed/themes/nu-disco.json".source = ./themes/nu-disco.json;
@@ -93,7 +94,7 @@
       "experimental.theme_overrides" = {
         "terminal.background" = "#000000";
         "search.match_background" = "#ae56e940"; # word-width box on all matches
-        "editor.active_line.background" = "#3d2040"; # visible row highlight on cursor line
+        # "editor.active_line.background" = "#3d2040"; # visible row highlight on cursor line
       };
 
       gutter = {
@@ -163,9 +164,10 @@
       # theme = "Ayu Dark";
       # theme = "Baby Blue";
       # theme = "Cool Panda";
-      # theme = "Dark Death";
+      theme = "Dark Death";
+      # theme = "GitLab Light";
       # theme = "Minimalist Purple";
-      theme = "Neo Dark Horizon";
+      # theme = "Neo Dark Horizon";
       # theme = "Nu Disco";
       # theme = "SRD's Synthwave Dark";
       # theme = "Wildberries Darker";
@@ -182,6 +184,9 @@
 
       vertical_scroll_margin = 0;
 
+      wrap_guides = [ 80 ];
+      show_wrap_guides = true;
+
       languages = {
         "Plain Text" = {
           soft_wrap = "none"; # No visual line wrap, scroll horizontally instead
@@ -193,7 +198,8 @@
           binary.path = "${pkgs.nil}/bin/nil";
         };
         # use nix ocamllsp directly, bypass Zed's opam wrapper (no switch needed)
-        "ocaml-lsp" = {
+        # server id is "ocamllsp" (per Zed error), NOT "ocaml-lsp"
+        ocamllsp = {
           binary = {
             path = "${pkgs.ocamlPackages.ocaml-lsp}/bin/ocamllsp";
             arguments = [ ];

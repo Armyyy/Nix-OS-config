@@ -7,7 +7,7 @@
         email = "armyhamumu@gmail.com";
       };
       core = {
-        editor = "nvim";
+        editor = "hx";
       };
     };
   };
