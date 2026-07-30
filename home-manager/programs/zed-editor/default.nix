@@ -67,6 +67,7 @@
     extensions = [
       "nix"
       "rainbow-csv"
+      "typst"
     ];
     # ~/.config/zed/settings.json
     userSettings = {

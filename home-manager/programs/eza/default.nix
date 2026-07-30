@@ -13,7 +13,7 @@
     extraOptions = [
       "-lah"
       "--group-directories-first"
-      "--colour-scale"
+      "--color-scale"
     ];
   };
 

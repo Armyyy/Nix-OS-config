@@ -25,6 +25,20 @@
     # Declarative flatpak (for Sober = Roblox on Linux)
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
+    # vim.hx: real vim modal editing as a Steel cog for steelix (source only)
+    vim-hx = {
+      url = "github:mattwparas/vim.hx";
+      flake = false;
+    };
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        # IMPORTANT: To ensure compatibility with the latest Firefox version, use nixpkgs-unstable.
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
   };
 
   outputs =

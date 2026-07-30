@@ -51,8 +51,10 @@
     ./tgpt
     ./tmux
     ./tor-browser
+    ./typst
     ./xclip
     ./yazi
     ./zed-editor
+    ./zen
   ];
 }
