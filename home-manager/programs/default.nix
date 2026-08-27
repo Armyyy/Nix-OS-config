@@ -23,6 +23,7 @@
     ./lazygit
     ./libreoffice
     ./mdformat
+    ./mise
     ./mission-center
     ./mullvad-vpn
     ./neovim
@@ -50,6 +51,7 @@
     ./television
     ./tgpt
     ./tmux
+    ./top
     ./tor-browser
     ./typst
     ./xclip
