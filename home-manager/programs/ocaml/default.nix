@@ -19,6 +19,6 @@
   # scoped vi keys for the rlwrap'd `ocaml` REPL only (see fish ocaml function)
   home.file.".config/ocaml/inputrc".text = ''
     set editing-mode vi
-    set show-mode-in-prompt on
+    set show-mode-in-prompt off
   '';
 }

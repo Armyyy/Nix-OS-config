@@ -1,6 +1,11 @@
 { pkgs, ... }:
 {
-  home.packages = [ pkgs.nil ];
+  home.packages = [
+    pkgs.nil
+    pkgs.texlab
+    # TeX distro + latexmk for the LaTeX extension's build-on-save
+    (pkgs.texliveSmall.withPackages (ps: [ ps.latexmk ]))
+  ];
 
   xdg.configFile."zed/keymap.json".text = builtins.toJSON [
     {
@@ -68,6 +73,7 @@
       "nix"
       "rainbow-csv"
       "typst"
+      "latex"
     ];
     # ~/.config/zed/settings.json
     userSettings = {
@@ -204,6 +210,29 @@
           binary = {
             path = "${pkgs.ocamlPackages.ocaml-lsp}/bin/ocamllsp";
             arguments = [ ];
+          };
+        };
+        # LaTeX extension downloads a prebuilt texlab that won't run on NixOS
+        texlab = {
+          binary = {
+            path = "${pkgs.texlab}/bin/texlab";
+            arguments = [ ];
+          };
+          settings.texlab = {
+            build = {
+              onSave = true;
+              forwardSearchAfter = false; # compile only, never open a viewer
+              executable = "latexmk";
+              args = [
+                "-pdf"
+                "-interaction=nonstopmode"
+                "-synctex=1"
+                "%f"
+              ];
+            };
+            # empty forwardSearch: stops the extension from autoconfiguring a
+            # PDF viewer and launching it on save
+            forwardSearch = { };
           };
         };
       };

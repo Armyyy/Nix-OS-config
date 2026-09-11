@@ -10,6 +10,7 @@
     ./direnv
     ./discord
     ./dune
+    ./evince
     ./eza
     ./fastfetch
     ./fd
