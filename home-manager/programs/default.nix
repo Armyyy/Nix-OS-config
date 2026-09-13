@@ -43,6 +43,7 @@
     ./putty
     ./qemu-kvm
     ./ripgrep
+    ./rustfmt
     ./screen
     ./sober
     ./sqlc
