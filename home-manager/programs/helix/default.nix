@@ -63,6 +63,9 @@ in
       theme = "custom";
       editor = {
         line-number = "relative";
+        # drop the line-number column (and the rest of the default gutter set:
+        # diff, spacer, ...); keep only the diagnostic dots
+        gutters = [ "diagnostics" ];
         cursorline = true;
         cursorcolumn = true;
         bufferline = "multiple";

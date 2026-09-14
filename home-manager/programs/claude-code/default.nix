@@ -67,6 +67,8 @@ let
     permissions = {
       defaultMode = "bypassPermissions";
     };
+    # Suppress the bypass-permissions disclaimer shown at every startup.
+    skipDangerousModePermissionPrompt = true;
     enabledPlugins = {
       "caveman@caveman" = true;
       "gopls-lsp@claude-plugins-official" = true;

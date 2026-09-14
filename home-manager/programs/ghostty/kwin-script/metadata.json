@@ -1,0 +1,11 @@
+{
+    "KPackageStructure": "KWin/Script",
+    "KPlugin": {
+        "Id": "ghostty-tile",
+        "Name": "Ghostty Tile Right",
+        "Description": "Tiles new Ghostty windows to the right half of the screen they open on",
+        "License": "MIT",
+        "Version": "1.0"
+    },
+    "X-Plasma-API": "javascript"
+}

@@ -22,11 +22,7 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#86BBD8 bg:#06969A)\
-$docker_context\
-[](fg:#06969A bg:#33658A)\
-$time\
-[ ](fg:#33658A)\
+[ ](fg:#86BBD8)\
 """
 
 # Disable the blank line at the start of the prompt
@@ -55,449 +51,241 @@ disabled = true # Disabled by default
 [directory]
 style = "bg:#DA627D"
 format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+truncation_length = 1
+truncation_symbol = ""
 
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-# by me
-"Ghostty" = " "
-"ghostty" = " "
-"3D Objects" = "󰟽 󰏗 "
-"nix-config" = "󱄅  "
-"Rust-playground" = " 󱖥 "
-"rust-book" = "  "
-"Python-playground" = " 󱖥 "
-"C-playground" = " 󱖥 "
-"master" = " "
-"Programs" = "󰱛 "
-"programs" = "󰱛 "
-"Program" = "󰱛 "
-"program" = "󰱛 "
-"libreoffice" = " "
-"man-db" = "  "
-"uaccess" = "  "
-"Disks" = "󰻂 "
-"disks" = "󰻂 "
-"Disk" = "󰻂 "
-"disk" = "󰻂 "
-"Libraries" = "󰮩 "
-"libraries" = "󰮩 "
-"Library" = "󰮩 "
-"library" = "󰮩 "
-"Libs" = "󰮩 "
-"libs" = "󰮩 "
-"Lib" = "󰮩 "
-"lib" = "󰮩 "
-"Profiles" = " "
-"profiles" = " "
-"Profile" = " "
-"profile" = " "
-"Contacts" = "󰖸 "
-"contacts" = "󰖸 "
-"Contact" = "󰖸 "
-"contact" = "󰖸 "
-"Codings" = " "
-"codings" = " "
-"Coding" = " "
-"coding" = " "
-"Codes" = " "
-"codes" = " "
-"Code" = " "
-"code" = " "
-"Power" = "󰤆 "
-"power" = "󰤆 "
-"Pins" = "󰐃 "
-"pins" = "󰐃 "
-"Pin" = "󰐃 "
-"pin" = "󰐃 "
-"Locals" = "󰐃 "
-"locals" = "󰐃 "
-"Local" = "󰐃 "
-"local" = "󰐃 "
-"Shares" = "󰒖 "
-"shares" = "󰒖 "
-"Share" = "󰒖 "
-"share" = "󰒖 "
-"States" = "󱇯 "
-"states" = "󱇯 "
-"State" = "󱇯 "
-"state" = "󱇯 "
-"Switches" = "󰟡 "
-"switches" = "󰟡 "
-"Switch" = "󰟡 "
-"switch" = "󰟡 "
-"Configs" = " "
-"configs" = " "
-"Config" = " "
-"config" = " "
-"Buses" = " "
-"buses" = " "
-"Bus" = " "
-"bus" = " "
-"Books" = " "
-"books" = " "
-"Book" = " "
-"book" = " "
-"Usbs" = " "
-"usbs" = " "
-"Usb" = " "
-"usb" = " "
-"binfmt" = " 󰼢 "
-"dbus" = " 󰟥"
-"resolvconf" = "󰇖  "
-"wrappers" = "󰖶 "
-"Manager" = " "
-"media" = "  "
-"block" = "󰂭 "
-"inaccessible" = "󰂭 "
-"rootfs" = " "
-"oom" = "  "
-"userdb" = "_"
-"home-manager" = "󰟐 "
-"Home" = " "
-"home" = " "
-"npm" = " "
-".npm" = " "
-"vim" = " "
-".vim" = " "
-"ssh" = "󰣀 "
-".ssh" = "󰣀 "
-"logos-icons" = " "
-"Playgrounds" = "󱖥 "
-"playgrounds" = "󱖥 "
-"Playground" = "󱖥 "
-"playground" = "󱖥 "
-"Rust" = " "
-"rust" = " "
-# "C" = " "
-"Python" = " "
-"Etc" = "󰪳 "
-"etc" = "󰪳 "
-"Desktop" = " "
-"desktop" = " "
-"Shutdown" = "󱐤 "
-"shutdown" = "󱐤 "
-"Public" = " "
-"public" = " "
-"Hidden" = " "
-"hidden" = " "
-"Privates" = " "
-"privates" = " "
-"Private" = " "
-"private" = " "
-"Caches" = " "
-"caches" = " "
-"Cache" = " "
-"cache" = " "
-"Watches" = " "
-"watches" = " "
-"Watch" = " "
-"watch" = " "
-"Files" = " "
-"files" = " "
-"File" = " "
-"file" = " "
-"Currents" = "󱒀 "
-"currents" = "󱒀 "
-"Current" = "󱒀 "
-"current" = "󱒀 "
-"Events" = " "
-"events" = " "
-"Event" = " "
-"event" = " "
-"Mice" = "󰍽 "
-"mice" = "󰍽 "
-"Mouse" = "󰍽 "
-"mouse" = "󰍽 "
-"Inputs" = "󱡫 "
-"inputs" = "󱡫 "
-"Input" = "󱡫 "
-"input" = "󱡫 "
-"Roots" = "󰞄 "
-"roots" = "󰞄 "
-"Root" = "󰞄 "
-"root" = "󰞄 "
-"Rules" = " "
-"rules" = " "
-"Rule" = " "
-"rule" = " "
-"Tags" = " "
-"tags" = " "
-"Tag" = " "
-"tag" = " "
-"Data" = "󰴁 "
-"data" = "󰴁 "
-"Datum" = "󰴁 "
-"datum" = "󰴁 "
-"Links" = " "
-"links" = " "
-"Link" = " "
-"link" = " "
-"CTF" = " "
-"ctf" = " "
-"Templates" = " "
-"templates" = " "
-"Videos" = " "
-"videos" = " "
-"University" = "󰑴 "
-"university" = "󰑴 "
-"Screenshots" = " "
-"screenshots" = " "
-"Castorice" = " "
-"castorice" = " "
-"Sparkle" = " "
-"sparkle" = " "
-"Hyacine" = "󱗂 "
-"hyacine" = "󱗂 "
-"Systemd" = " "
-"systemd" = " "
-"Timesync" = "  "
-"timesync" = "  "
-"Nix" ="󱄅 "
-"nix" = "󱄅 "
-"Examples" = " "
-"examples" = " "
-"Example" = " "
-"example" = " "
-"Credentials" = "  "
-"credentials" = "  "
-"Credential" = "  "
-"credential" = "  "
-"Inhibits" = "󱠫 "
-"inhibits" = "󱠫 "
-"Inhibit" = "󱠫"
-"inhibit" = "󱠫"
-"Metrics" = " "
-"metrics" = " "
-"Metric" = " "
-"metric" = " "
-"Keys" = " "
-"keys" = " "
-"Key" = " "
-"key" = " "
-"Indexes" = " "
-"indexes" = " "
-"Index" = " "
-"index" = " "
-"Sauces" = "󰟮 "
-"sauces" = "󰟮 "
-"Sauce" = "󰟮 "
-"sauce" = "󰟮 "
-"Sources" = "󰟮 "
-"sources" = "󰟮 "
-"Source" = "󰟮 "
-"source" = "󰟮 "
-"Src" = "󰟮 "
-"src" = "󰟮 "
-"Crates" = "󰜦 "
-"crates" = "󰜦 "
-"Crate" = "󰜦 "
-"crate" = "󰜦 "
-"Registries" = "󰪶 "
-"registries" = "󰪶 "
-"Registry" = "󰪶 "
-"registry" = "󰪶 "
-"Cargoes" = "󱣘 "
-"cargoes" = "󱣘 "
-"Cargos" = "󱣘 "
-"cargos" = "󱣘 "
-"Cargo" = "󱣘 "
-"cargo" = "󱣘 "
-"Cups" = "󰆫 "
-"cups" = "󰆫 "
-"Cup" = "󰆫 "
-"cup" = "󰆫 "
-"Certs" = "󱆆 "
-"certs" = "󱆆 "
-"Cert" = "󱆆 "
-"cert" = "󱆆 "
-"Generators" = "󰈏 "
-"generators" = "󰈏 "
-"Generator" = "󰈏 "
-"generator" = "󰈏 "
-"Incomings" = " "
-"incomings" = " "
-"Incoming" = " "
-"incoming" = " "
-"Rivers" = " "
-"rivers" = " "
-"River" = " "
-"river" = " "
-"Streams" = " "
-"streams" = " "
-"Stream" = " "
-"stream" = " "
-"Mounts" = " "
-"mounts" = " "
-"Mount" = " "
-"mount" = " "
-"Sessions" = "  "
-"sessions" = "  "
-"Session" = "  "
-"session" = "  "
-"Connections" = "󱘖 "
-"connections" = "󱘖 "
-"Connection" = "󱘖 "
-"connection" = "󱘖 "
-"Linux" = " "
-"linux" = " "
-"Systems" = " "
-"systems" = " "
-"System" = " "
-"system" = " "
-"Units" = "󰩦 "
-"units" = "󰩦 "
-"Unit" = "󰩦 "
-"unit" = "󰩦 "
-"Runs" = " "
-"Run" = " "
-"runs" = " "
-"run" = " "
-"Fonts" = "󰛖 "
-"fonts" = "󰛖 "
-"Font" = "󰛖 "
-"font" = "󰛖 "
-"Devices" = "󰾰 "
-"devices" = "󰾰 "
-"Device" = "󰾰 "
-"device" = "󰾰 "
-"Machines" = "󱄔 "
-"machines" = "󱄔 "
-"Machine" = "󱄔 "
-"machine" = "󱄔 "
-"Devs" = "󰵮 "
-"Dev" = "󰵮 "
-"devs" = "󰵮 "
-"dev" = "󰵮 "
-"Bins" = ""
-"Bin" = ""
-"bins" = ""
-"bin" = ""
-"Temp" = " 󱦟"
-"temp" = " 󱦟"
-"Tmp" = " 󱦟"
-"tmp" = " 󱦟"
-"Users" = " "
-"users" = " "
-"Usrs" = " "
-"usrs" = " "
-"User" = " "
-"user" = " "
-"Usr" = " "
-"usr" = " "
-"Vars" = "󰈙 "
-"Var" = "󰈙 "
-"vars" = "󰈙 "
-"var" = "󰈙 "
-"Logs" = " "
-"logs" = " "
-"Log" = " "
-"log" = " "
-"Seats" = "󰾤"
-"seats" = "󰾤"
-"Seat" = "󰾤"
-"seat" = "󰾤"
-"Asks" = "󰺴 "
-"asks" = "󰺴 "
-"Ask" = "󰺴 "
-"ask" = "󰺴 "
-"Locks" = " "
-"locks" = " "
-"Lock" = " "
-"lock" = " "
-"Passwords" = "󰟵 "
-"passwords" = "󰟵 "
-"Password" = "󰟵 "
-"password" = "󰟵 "
-"Journals" = " "
-"journals" = " "
-"Journal" = " "
-"journal" = " "
-"Stores" = "󰓜 "
-"stores" = "󰓜 "
-"Store" = "󰓜 "
-"store" = "󰓜 "
-"Sudos" = "󰆥 "
-"sudos" = "󰆥 "
-"Sudo" = "󰆥 "
-"sudo" = "󰆥 "
-"Securities" = "󰒃 "
-"securities" = "󰒃 "
-"Security" = "󰒃 "
-"security" = "󰒃 "
-"Classrooms" = "󰋀 "
-"classrooms" = "󰋀 "
-"Classroom" = "󰋀 "
-"classroom" = "󰋀 "
-"in-class" = "󰋀 "
-"Transients" = " "
-"transients" = " "
-"Transient" = " "
-"transient" = " "
-"Tests" = "󰙨 "
-"tests" = "󰙨 "
-"Test" = "󰙨 "
-"test" = "󰙨 "
-"Networks" = " "
-"networks" = " "
-"Network" = " "
-"network" = " "
-"Environments" = " "
-"environments" = " "
-"Environment" = " "
-"environment" = " "
-"Envs" = " "
-"envs" = " "
-"Env" = " "
-"env" = " "
-"Propagates" = " "
-"propagates" = " "
-"Propagate" = " "
-"propagate" = " "
-"Bluetooths" = "󰂯"
-"bluetooths" = "󰂯 "
-"Bluetooth" = "󰂯 "
-"bluetooth" = "󰂯 "
-"Services" = "󰢍 "
-"services" = "󰢍 "
-"Service" = "󰢍 "
-"service" = "󰢍 "
-"nv" = " "
-"app" = " "
-"Google" = " "
-"google" = " "
-"Git" = " "
-"git" = " "
-"Gitlab" = " "
-"gitlab" = " "
-"Chrome" = "󰊯 "
-"chrome" = "󰊯 "
-"Mozilla" = " "
-"mozilla" = " "
-"FireFox" = "󰈹 "
-"Firefox" = "󰈹 "
-"fireFox" = "󰈹 "
-"firefox" = "󰈹 "
-"Pkgs" = "󰏖 "
-"pkgs" = "󰏖 "
-"Pkg" = "󰏖 "
-"pkg" = "󰏖 "
-"Infos" = " "
-"infos" = " "
-"Info" = " "
-"info" = " "
+substitutions = [
+  # strip the leading "/" so root-level dirs render as just the icon
+  { from = "^/(.)", to = "$1", regex = true },
 
-# Keep in mind that the order matters. For example:
-# "Important Documents" = " 󰈙 "
-# will not be replaced, because "Documents" was already substituted before.
-# So either put "Important Documents" before "Documents" or use the substituted version:
-# "Important 󰈙 " = " 󰈙 "
+  # more specific than an entry below -> must be matched first
+  { from = "(?i-u)dbus", to = " 󰟥", regex = true },
+  { from = "(?i-u)home-manager", to = "󰟐 ", regex = true },
+  { from = "(?i-u)(classrooms|classroom|in-class)", to = "󰋀 ", regex = true },
+  { from = "(?i-u)gitlab", to = " ", regex = true },
+  { from = "(?i-u)nixos", to = " ", regex = true },
+  { from = "(?i-u)(neovim|nvim)", to = " ", regex = true },
+  { from = "(?i-u)haskell", to = " ", regex = true },
+  { from = "(?i-u)(postgresql|postgres)", to = " ", regex = true },
+  { from = "(?i-u)mysql", to = " ", regex = true },
+  { from = "(?i-u)(databases?|sql)", to = " ", regex = true },
+
+  # order matters: the first match wins, so longer names come first
+  { from = "(?i-u)documents", to = "󰈙 ", regex = true },
+  { from = "(?i-u)downloads", to = " ", regex = true },
+  { from = "(?i-u)music", to = " ", regex = true },
+  { from = "(?i-u)pictures", to = " ", regex = true },
+  { from = "(?i-u)ghostty", to = " ", regex = true },
+  { from = "(?i-u)3d objects", to = "󰟽 󰏗 ", regex = true },
+  { from = "(?i-u)nix-config", to = "󱄅  ", regex = true },
+  { from = "(?i-u)rust-playground", to = " 󱖥 ", regex = true },
+  { from = "(?i-u)rust-book", to = "  ", regex = true },
+  { from = "(?i-u)python-playground", to = " 󱖥 ", regex = true },
+  { from = "(?i-u)c-playground", to = " 󱖥 ", regex = true },
+  { from = "(?i-u)master", to = " ", regex = true },
+  { from = "(?i-u)programs?", to = "󰱛 ", regex = true },
+  { from = "(?i-u)libreoffice", to = " ", regex = true },
+  { from = "(?i-u)man-db", to = "  ", regex = true },
+  { from = "(?i-u)uaccess", to = "  ", regex = true },
+  { from = "(?i-u)disks?", to = "󰻂 ", regex = true },
+  { from = "(?i-u)(libraries|library|libs|lib)", to = "󰮩 ", regex = true },
+  { from = "(?i-u)profiles?", to = " ", regex = true },
+  { from = "(?i-u)contacts?", to = "󰖸 ", regex = true },
+  { from = "(?i-u)(codings|coding|codes|code)", to = " ", regex = true },
+  { from = "(?i-u)power", to = "󰤆 ", regex = true },
+  { from = "(?i-u)(locals|local|pins|pin)", to = "󰐃 ", regex = true },
+  { from = "(?i-u)shares?", to = "󰒖 ", regex = true },
+  { from = "(?i-u)states?", to = "󱇯 ", regex = true },
+  { from = "(?i-u)switch(es)?", to = "󰟡 ", regex = true },
+  { from = "(?i-u)configs?", to = " ", regex = true },
+  { from = "(?i-u)bus(es)?", to = " ", regex = true },
+  { from = "(?i-u)books?", to = " ", regex = true },
+  { from = "(?i-u)usbs?", to = " ", regex = true },
+  { from = "(?i-u)binfmt", to = " 󰼢 ", regex = true },
+  { from = "(?i-u)resolvconf", to = "󰇖  ", regex = true },
+  { from = "(?i-u)wrappers", to = "󰖶 ", regex = true },
+  { from = "(?i-u)manager", to = " ", regex = true },
+  { from = "(?i-u)media", to = "  ", regex = true },
+  { from = "(?i-u)(inaccessible|block)", to = "󰂭 ", regex = true },
+  { from = "(?i-u)rootfs", to = " ", regex = true },
+  { from = "(?i-u)oom", to = "  ", regex = true },
+  { from = "(?i-u)userdb", to = "_", regex = true },
+  { from = "(?i-u)home", to = " ", regex = true },
+  { from = "(?i-u)(\\.npm|npm)", to = " ", regex = true },
+  { from = "(?i-u)(\\.vim|vim)", to = " ", regex = true },
+  { from = "(?i-u)(\\.ssh|ssh)", to = "󰣀 ", regex = true },
+  { from = "(?i-u)logos-icons", to = " ", regex = true },
+  { from = "(?i-u)playgrounds?", to = "󱖥 ", regex = true },
+  { from = "(?i-u)rust", to = " ", regex = true },
+  { from = "(?i-u)python", to = " ", regex = true },
+  { from = "(?i-u)etc", to = "󰪳 ", regex = true },
+  { from = "(?i-u)desktop", to = " ", regex = true },
+  { from = "(?i-u)shutdown", to = "󱐤 ", regex = true },
+  { from = "(?i-u)public", to = " ", regex = true },
+  { from = "(?i-u)(privates|private|hidden)", to = " ", regex = true },
+  { from = "(?i-u)caches?", to = " ", regex = true },
+  { from = "(?i-u)watch(es)?", to = " ", regex = true },
+  { from = "(?i-u)files", to = " ", regex = true },
+  { from = "(?i-u)file", to = " ", regex = true },
+  { from = "(?i-u)currents?", to = "󱒀 ", regex = true },
+  { from = "(?i-u)events?", to = " ", regex = true },
+  { from = "(?i-u)(mouse|mice)", to = "󰍽 ", regex = true },
+  { from = "(?i-u)inputs?", to = "󱡫 ", regex = true },
+  { from = "(?i-u)roots?", to = "󰞄 ", regex = true },
+  { from = "(?i-u)rules?", to = " ", regex = true },
+  { from = "(?i-u)tags?", to = " ", regex = true },
+  { from = "(?i-u)(datum|data)", to = "󰴁 ", regex = true },
+  { from = "(?i-u)links?", to = " ", regex = true },
+  { from = "(?i-u)ctf", to = " ", regex = true },
+  { from = "(?i-u)templates", to = " ", regex = true },
+  { from = "(?i-u)videos", to = " ", regex = true },
+  { from = "(?i-u)university", to = "󰑴 ", regex = true },
+  { from = "(?i-u)screenshots", to = " ", regex = true },
+  { from = "(?i-u)castorice", to = " ", regex = true },
+  { from = "(?i-u)sparkle", to = " ", regex = true },
+  { from = "(?i-u)hyacine", to = "󱗂 ", regex = true },
+  { from = "(?i-u)systemd", to = " ", regex = true },
+  { from = "(?i-u)timesync", to = "  ", regex = true },
+  { from = "(?i-u)nix", to = "󱄅 ", regex = true },
+  { from = "(?i-u)examples?", to = " ", regex = true },
+  { from = "(?i-u)credentials?", to = "  ", regex = true },
+  { from = "(?i-u)inhibits", to = "󱠫 ", regex = true },
+  { from = "(?i-u)inhibit", to = "󱠫", regex = true },
+  { from = "(?i-u)metrics?", to = " ", regex = true },
+  { from = "(?i-u)keys?", to = " ", regex = true },
+  { from = "(?i-u)index(es)?", to = " ", regex = true },
+  { from = "(?i-u)(sources|sauces|source|sauce|src)", to = "󰟮 ", regex = true },
+  { from = "(?i-u)crates?", to = "󰜦 ", regex = true },
+  { from = "(?i-u)(registries|registry)", to = "󰪶 ", regex = true },
+  { from = "(?i-u)(cargoes|cargos|cargo)", to = "󱣘 ", regex = true },
+  { from = "(?i-u)cups?", to = "󰆫 ", regex = true },
+  { from = "(?i-u)certs?", to = "󱆆 ", regex = true },
+  { from = "(?i-u)generators?", to = "󰈏 ", regex = true },
+  { from = "(?i-u)incomings?", to = " ", regex = true },
+  { from = "(?i-u)(streams|rivers|stream|river)", to = " ", regex = true },
+  { from = "(?i-u)mounts?", to = " ", regex = true },
+  { from = "(?i-u)sessions?", to = "  ", regex = true },
+  { from = "(?i-u)connections?", to = "󱘖 ", regex = true },
+  { from = "(?i-u)(systems|system|linux)", to = " ", regex = true },
+  { from = "(?i-u)units?", to = "󰩦 ", regex = true },
+  { from = "(?i-u)runs?", to = " ", regex = true },
+  { from = "(?i-u)fonts?", to = "󰛖 ", regex = true },
+  { from = "(?i-u)devices?", to = "󰾰 ", regex = true },
+  { from = "(?i-u)machines?", to = "󱄔 ", regex = true },
+  { from = "(?i-u)devs?", to = "󰵮 ", regex = true },
+  { from = "(?i-u)bins?", to = "", regex = true },
+  { from = "(?i-u)(temp|tmp)", to = " 󱦟", regex = true },
+  { from = "(?i-u)(users|usrs)", to = " ", regex = true },
+  { from = "(?i-u)(user|usr)", to = " ", regex = true },
+  { from = "(?i-u)vars?", to = "󰈙 ", regex = true },
+  { from = "(?i-u)logs?", to = " ", regex = true },
+  { from = "(?i-u)seats?", to = "󰾤", regex = true },
+  { from = "(?i-u)asks?", to = "󰺴 ", regex = true },
+  { from = "(?i-u)locks?", to = " ", regex = true },
+  { from = "(?i-u)passwords?", to = "󰟵 ", regex = true },
+  { from = "(?i-u)journals?", to = " ", regex = true },
+  { from = "(?i-u)stores?", to = "󰓜 ", regex = true },
+  { from = "(?i-u)sudos?", to = "󰆥 ", regex = true },
+  { from = "(?i-u)(securities|security)", to = "󰒃 ", regex = true },
+  { from = "(?i-u)transients?", to = " ", regex = true },
+  { from = "(?i-u)tests?", to = "󰙨 ", regex = true },
+  { from = "(?i-u)networks?", to = " ", regex = true },
+  { from = "(?i-u)(environments|environment|envs|env)", to = " ", regex = true },
+  { from = "(?i-u)propagates?", to = " ", regex = true },
+  { from = "(?i-u)bluetooths?", to = "󰂯 ", regex = true },
+  { from = "(?i-u)services?", to = "󰢍 ", regex = true },
+  { from = "(?i-u)nv", to = " ", regex = true },
+  { from = "(?i-u)app", to = " ", regex = true },
+  { from = "(?i-u)google", to = " ", regex = true },
+  { from = "(?i-u)git", to = " ", regex = true },
+  { from = "(?i-u)chrome", to = "󰊯 ", regex = true },
+  { from = "(?i-u)mozilla", to = " ", regex = true },
+  { from = "(?i-u)firefox", to = "󰈹 ", regex = true },
+  { from = "(?i-u)pkgs?", to = "󰏖 ", regex = true },
+  { from = "(?i-u)infos?", to = " ", regex = true },
+
+  # added later; anything above already had its shot at the path
+  { from = "(?i-u)node_modules", to = " ", regex = true },
+  { from = "(?i-u)docker", to = " ", regex = true },
+  { from = "(?i-u)(kubernetes|k8s)", to = " ", regex = true },
+  { from = "(?i-u)terraform", to = " ", regex = true },
+  { from = "(?i-u)ansible", to = " ", regex = true },
+  { from = "(?i-u)android", to = " ", regex = true },
+  { from = "(?i-u)golang", to = " ", regex = true },
+  { from = "(?i-u)typescript", to = " ", regex = true },
+  { from = "(?i-u)javascript", to = " ", regex = true },
+  { from = "(?i-u)markdown", to = " ", regex = true },
+  { from = "(?i-u)html", to = " ", regex = true },
+  { from = "(?i-u)css", to = " ", regex = true },
+  { from = "(?i-u)react", to = " ", regex = true },
+  { from = "(?i-u)(vuejs|vue)", to = " ", regex = true },
+  { from = "(?i-u)ocaml", to = " ", regex = true },
+  { from = "(?i-u)kotlin", to = " ", regex = true },
+  { from = "(?i-u)swift", to = " ", regex = true },
+  { from = "(?i-u)ruby", to = " ", regex = true },
+  { from = "(?i-u)dart", to = " ", regex = true },
+  { from = "(?i-u)zig", to = " ", regex = true },
+  { from = "(?i-u)php", to = " ", regex = true },
+  { from = "(?i-u)lua", to = " ", regex = true },
+  { from = "(?i-u)node", to = " ", regex = true },
+  { from = "(?i-u)scripts?", to = "󰯂 ", regex = true },
+  { from = "(?i-u)builds?", to = "󰣪 ", regex = true },
+  { from = "(?i-u)dist", to = "󰆧 ", regex = true },
+  { from = "(?i-u)targets?", to = "󰓾 ", regex = true },
+  { from = "(?i-u)vendor", to = "󰉓 ", regex = true },
+  { from = "(?i-u)components?", to = "󰐱 ", regex = true },
+  { from = "(?i-u)plugins?", to = "󰣆 ", regex = true },
+  { from = "(?i-u)modules?", to = "󰌨 ", regex = true },
+  { from = "(?i-u)overlays?", to = "󰠱 ", regex = true },
+  { from = "(?i-u)assets?", to = "󰏗 ", regex = true },
+  { from = "(?i-u)statics?", to = "󰌨 ", regex = true },
+  { from = "(?i-u)models?", to = "󰀁 ", regex = true },
+  { from = "(?i-u)views?", to = "󰕮 ", regex = true },
+  { from = "(?i-u)controllers?", to = "󰘮 ", regex = true },
+  { from = "(?i-u)migrations?", to = "󰓫 ", regex = true },
+  { from = "(?i-u)schemas?", to = "󰒪 ", regex = true },
+  { from = "(?i-u)types?", to = "󰓻 ", regex = true },
+  { from = "(?i-u)utils?", to = "󰦬 ", regex = true },
+  { from = "(?i-u)hooks?", to = "󰅩 ", regex = true },
+  { from = "(?i-u)patches?", to = "󰘬 ", regex = true },
+  { from = "(?i-u)(benchmarks?|bench)", to = "󰓅 ", regex = true },
+  { from = "(?i-u)releases?", to = "󱓞 ", regex = true },
+  { from = "(?i-u)snapshots?", to = "󰄀 ", regex = true },
+  { from = "(?i-u)apis?", to = "󱂛 ", regex = true },
+  { from = "(?i-u)servers?", to = "󰒋 ", regex = true },
+  { from = "(?i-u)clients?", to = "󰍹 ", regex = true },
+  { from = "(?i-u)web", to = "󰖟 ", regex = true },
+  { from = "(?i-u)auth", to = "󰌾 ", regex = true },
+  { from = "(?i-u)admin", to = "󰡉 ", regex = true },
+  { from = "(?i-u)secrets?", to = "󰦝 ", regex = true },
+  { from = "(?i-u)gpg", to = "󰯄 ", regex = true },
+  { from = "(?i-u)hosts?", to = "󰡰 ", regex = true },
+  { from = "(?i-u)hardware", to = "󰘚 ", regex = true },
+  { from = "(?i-u)boot", to = "󰑣 ", regex = true },
+  { from = "(?i-u)efi", to = "󰍛 ", regex = true },
+  { from = "(?i-u)mnt", to = "󰋊 ", regex = true },
+  { from = "(?i-u)opt", to = "󰝰 ", regex = true },
+  { from = "(?i-u)docs?", to = "󱔗 ", regex = true },
+  { from = "(?i-u)notes?", to = "󰠮 ", regex = true },
+  { from = "(?i-u)todos?", to = "󱃔 ", regex = true },
+  { from = "(?i-u)wiki", to = "󰗚 ", regex = true },
+  { from = "(?i-u)slides?", to = "󰐨 ", regex = true },
+  { from = "(?i-u)reports?", to = "󱕍 ", regex = true },
+  { from = "(?i-u)schools?", to = "󰑴 ", regex = true },
+  { from = "(?i-u)backups?", to = "󰁯 ", regex = true },
+  { from = "(?i-u)archives?", to = "󰀼 ", regex = true },
+  { from = "(?i-u)trash", to = "󰩹 ", regex = true },
+  { from = "(?i-u)history", to = "󰋚 ", regex = true },
+  { from = "(?i-u)wallpapers?", to = "󰸉 ", regex = true },
+  { from = "(?i-u)icons?", to = "󰏘 ", regex = true },
+  { from = "(?i-u)themes?", to = "󰃣 ", regex = true },
+  { from = "(?i-u)(images?|imgs?)", to = "󰉏 ", regex = true },
+  { from = "(?i-u)movies?", to = "󰿎 ", regex = true },
+  { from = "(?i-u)(audio|sounds?)", to = "󰲸 ", regex = true },
+  { from = "(?i-u)games?", to = "󰊗 ", regex = true },
+]
 
 [c]
 symbol = " "
