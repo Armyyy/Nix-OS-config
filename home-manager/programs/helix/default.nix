@@ -72,6 +72,11 @@ in
         rulers = [ 81 ];
         color-modes = true;
         true-color = true;
+        # steelix-only: trust every workspace implicitly, killing the
+        # "Trust this workspace?" prompt. Trusted workspaces auto-start
+        # language servers and load local config, both of which can run
+        # arbitrary code.
+        insecure = true;
         cursor-shape = {
           insert = "bar";
           normal = "block";
