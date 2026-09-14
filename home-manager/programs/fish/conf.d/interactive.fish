@@ -1,3 +1,6 @@
+# suppress "Welcome to fish, the friendly interactive shell" banner
+set -g fish_greeting ''
+
 # -U (universal) required — fish color vars ignore -g (global)
 set -U fish_color_autosuggestion '444'
 
