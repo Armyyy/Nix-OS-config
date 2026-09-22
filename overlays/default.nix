@@ -11,6 +11,16 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
+
+    # fish 4.9.3 panics with "attempt to subtract with overflow" whenever a vi
+    # repeat-jump (`;` / `,`) with Till precision runs on an empty command
+    # line: src/reader/reader.rs computes `el.len() - 1` on a usize. Since
+    # `t`/`T` (and the `ci<x>`/`di<x>`/`yi<x>` chains) leave Till as the
+    # remembered precision for the rest of the session, a single `;` at an
+    # empty normal-mode prompt kills the shell. Not fixed upstream as of 4.9.3.
+    fish = prev.fish.overrideAttrs (oldAttrs: {
+      patches = (oldAttrs.patches or [ ]) ++ [ ./fish-jump-till-overflow.patch ];
+    });
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

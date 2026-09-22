@@ -6,6 +6,10 @@
         body = builtins.readFile ./functions/fish_command_not_found.fish;
         description = "command not found handler with nix-index lookup and 10min cache";
       };
+      fish_user_key_bindings = {
+        body = builtins.readFile ./functions/fish_user_key_bindings.fish;
+        description = "vi-mode bindings; guards ; and , against the fish repeat-jump overflow crash";
+      };
       hpick = {
         body = builtins.readFile ./functions/hpick.fish;
         description = "copy history entry to clipboard via fzf";

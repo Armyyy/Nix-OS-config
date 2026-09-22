@@ -1,0 +1,20 @@
+Fix panic "attempt to subtract with overflow" at src/reader/reader.rs:2546.
+
+The forward branch of Reader::jump computes `el.len() - 1` on a usize, so a
+repeat-jump (vi `;` / `,`) with Till precision on an empty command line
+underflows and aborts the shell. The backward branch already guards with
+`tmp_pos > 0`; mirror that by moving the `+ 1` to the left-hand side.
+
+Upstream: not yet fixed as of 4.9.3.
+
+--- a/src/reader/reader.rs
++++ b/src/reader/reader.rs
+@@ -2543,7 +2543,7 @@
+             }
+             JumpDirection::Forward => {
+                 let mut tmp_pos = el.position() + 1;
+-                if precision == JumpPrecision::Till && skip_till && tmp_pos < el.len() - 1 {
++                if precision == JumpPrecision::Till && skip_till && tmp_pos + 1 < el.len() {
+                     tmp_pos += 1;
+                 }
+ 
