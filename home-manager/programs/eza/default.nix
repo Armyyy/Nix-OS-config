@@ -11,7 +11,7 @@
     icons = "always";
 
     extraOptions = [
-      "-lah"
+      "-lh"
       "--group-directories-first"
       "--color-scale"
     ];
