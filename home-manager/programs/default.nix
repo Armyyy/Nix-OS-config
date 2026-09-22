@@ -15,6 +15,7 @@
     ./fastfetch
     ./fd
     ./fish
+    ./foot
     ./freetube
     ./fzf
     ./ghostty
