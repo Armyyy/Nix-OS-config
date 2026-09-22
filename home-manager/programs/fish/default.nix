@@ -106,6 +106,10 @@
         body = builtins.readFile ./functions/pastefile.fish;
         description = "cp -r the copyfile clipboard into cwd (or given dest dir)";
       };
+      wl-copy = {
+        body = builtins.readFile ./functions/wl-copy.fish;
+        description = "wl-copy with stderr detached so tmux popups can still close";
+      };
     };
     shellAliases = import ./conf.d/aliases.nix;
     shellInit = builtins.readFile ./conf.d/init.fish;
