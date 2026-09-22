@@ -195,7 +195,10 @@
 
   programs.fish.enable = true;
   programs.nix-ld.enable = true; # run generic Linux binaries (e.g. Zed LSP extensions)
-  programs.nix-ld.libraries = with pkgs; [ stdenv.cc.cc zlib ];
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+  ];
   programs.wireshark = {
     enable = true;
     package = pkgs.wireshark;
@@ -221,7 +224,10 @@
 
   networking.hostName = "a-legion";
 
-  users.users."qemu-libvirtd".extraGroups = [ "render" "video" ];
+  users.users."qemu-libvirtd".extraGroups = [
+    "render"
+    "video"
+  ];
 
   users.users = {
     army = {
@@ -243,7 +249,7 @@
 
   environment.systemPackages = with pkgs; [
     gitlab-runner
-    gns3-gui        # GNS3 frontend; talks to services.gns3-server
+    gns3-gui # GNS3 frontend; talks to services.gns3-server
     postgresql
     redis
     swtpm
