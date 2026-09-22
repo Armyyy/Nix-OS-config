@@ -16,5 +16,6 @@
   glo = "git log --oneline";
   gcm = "git commit -m ";
 
-  # docker
+  # cargo
+  cr = "cargo run";
 }
