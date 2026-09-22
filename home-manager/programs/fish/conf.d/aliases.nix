@@ -4,7 +4,7 @@
   et = "exit";
 
   # eza
-  ls = "eza --tree --level=1";
+  ls = "lsTree";
 
   # fish
   ef = "exec fish";

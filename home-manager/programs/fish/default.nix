@@ -98,6 +98,10 @@
         body = builtins.readFile ./functions/copyfile.fish;
         description = "stash file/dir path(s) in universal clipboard var; paste with pastefile";
       };
+      lsTree = {
+        body = builtins.readFile ./functions/lsTree.fish;
+        description = "eza tree one level deep, rooted at cwd name; dotfiles need -a";
+      };
       pastefile = {
         body = builtins.readFile ./functions/pastefile.fish;
         description = "cp -r the copyfile clipboard into cwd (or given dest dir)";
