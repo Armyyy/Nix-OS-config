@@ -69,6 +69,8 @@ let
     };
     # Suppress the bypass-permissions disclaimer shown at every startup.
     skipDangerousModePermissionPrompt = true;
+    # Suppress the "make auto mode your default?" opt-in dialog (v2.1.268+).
+    skipAutoPermissionPrompt = true;
     enabledPlugins = {
       "caveman@caveman" = true;
       "gopls-lsp@claude-plugins-official" = true;
