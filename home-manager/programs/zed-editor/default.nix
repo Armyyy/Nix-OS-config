@@ -92,6 +92,9 @@
         custom = 1.2;
       };
 
+      # LSP code lens: "off" | "on" (above the line) | "menu" (in code action menu)
+      code_lens = "on";
+
       diagnostics = {
         inline = {
           enabled = true;
