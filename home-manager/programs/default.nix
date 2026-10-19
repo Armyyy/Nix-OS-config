@@ -5,6 +5,7 @@
     ./bruno
     ./bruno-cli
     ./claude-code
+    ./claude-desktop
     ./csvlens
     ./devenv
     ./direnv

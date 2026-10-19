@@ -39,7 +39,9 @@
         home-manager.follows = "home-manager";
       };
     };
+    claude-desktop.url = "github:aaddrick/claude-desktop-debian";
   };
+
 
   outputs =
     {
@@ -104,4 +106,5 @@
       #   };
       # };
     };
+
 }
