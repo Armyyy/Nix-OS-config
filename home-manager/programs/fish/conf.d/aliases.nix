@@ -6,6 +6,9 @@
   # eza
   ls = "lsTree";
 
+  # dictionary (sdcv + LEXiTRON, offline EN<->TH)
+  dict = "sdcv -n --color";
+
   # fish
   ef = "exec fish";
 

@@ -47,6 +47,7 @@
     ./ripgrep
     ./rustfmt
     ./screen
+    ./sdcv
     ./sober
     ./sqlc
     ./sqlite
