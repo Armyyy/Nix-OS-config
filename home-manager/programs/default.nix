@@ -1,7 +1,6 @@
 {
   imports = [
     ./bat
-    ./brave
     ./bruno
     ./bruno-cli
     ./claude-code
