@@ -79,7 +79,7 @@ in
         # "Trust this workspace?" prompt. Trusted workspaces auto-start
         # language servers and load local config, both of which can run
         # arbitrary code.
-        insecure = true;
+        workspace-trust.level = "insecure";
         cursor-shape = {
           insert = "bar";
           normal = "block";
