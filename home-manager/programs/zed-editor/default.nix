@@ -184,9 +184,11 @@
             outline_panel.button = false;
             collaboration_panel.button = false;
             git_panel.button = false;
-            # agent off = no Threads Sidebar toggle in status bar (no setting for it alone)
+            # keep agent enabled: agent.enabled = false hides the Threads Sidebar
+            # toggle but also collapses multi-workspace ("This Window" in ctrl-alt-o)
+            # explicit true: settings.json is merged, so a removed key would persist
             agent = {
-              enabled = false;
+              enabled = true;
               button = false;
             };
             diagnostics.button = false;
