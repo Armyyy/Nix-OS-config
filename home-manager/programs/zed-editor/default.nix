@@ -52,6 +52,7 @@
         "space h" = "pane::ActivatePreviousItem";
         "space l" = "pane::ActivateNextItem";
         "space w" = "editor::ToggleSoftWrap";
+        "space f" = "settings_profile_selector::Toggle";
       };
     }
   ];
@@ -147,6 +148,67 @@
 
       tab_bar = {
         show = true;
+      };
+
+      # pick via `space f` (settings_profile_selector); "Disabled" = back to base
+      # base "user" (default) = applied on top of these userSettings
+      profiles = {
+        "No Tabs" = {
+          settings = {
+            tab_bar.show = false;
+
+            title_bar = {
+              show_branch_name = false;
+              show_worktree_name = false;
+              show_project_items = false;
+              show_onboarding_banner = false;
+              show_user_picture = false;
+              show_user_menu = false;
+              show_sign_in = false;
+            };
+
+            toolbar = {
+              breadcrumbs = false;
+              quick_actions = false;
+              selections_menu = false;
+              agent_review = false;
+              code_actions = false;
+            };
+
+            # keep status bar for the full file path, drop everything else
+            status_bar = {
+              active_language_button = false;
+              cursor_position_button = false;
+            };
+            project_panel.button = false;
+            outline_panel.button = false;
+            collaboration_panel.button = false;
+            git_panel.button = false;
+            # agent off = no Threads Sidebar toggle in status bar (no setting for it alone)
+            agent = {
+              enabled = false;
+              button = false;
+            };
+            diagnostics.button = false;
+            terminal.button = false;
+            debugger.button = false;
+            search.button = false;
+
+            scrollbar.show = "never";
+            indent_guides.enabled = false;
+            show_wrap_guides = false;
+            code_lens = "off";
+            inline_code_actions = false;
+            global_lsp_settings.button = false;
+            # provider "none" = no Edit Prediction button in status bar
+            edit_predictions.provider = "none";
+            diagnostics.inline.enabled = false;
+            git = {
+              git_gutter = "hide";
+              inline_blame.enabled = false;
+            };
+          };
+        };
       };
 
       status_bar = {
